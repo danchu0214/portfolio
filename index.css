@@ -172,11 +172,23 @@ header .list4:before {
 }
 
 /***** main-title *****/
+
 .main-title {
     width: 90vw;
     margin: 0 auto;
-    padding:160px 0 120px;
+    padding: 0 0 120px;
+    position: sticky;
+    top: 160px;
+    z-index: -99;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
+.main-title.visible {
+    opacity: 1;
+}
+  .header.visible {
+    transform: translateY(0);
+  }
 
 .main-title h2 {
     display: flex;
@@ -188,13 +200,16 @@ header .list4:before {
   text-wrap: nowrap;
   font-weight: 400;
   line-height: 0.96;
+
 }
+
 
 /***** main-contents *****/
 .main-contents {
   background-color: #040404;
   color: #fff;
-  padding-top: 120px;
+  padding-top: 5%; 
+  margin-top: 8%;
 
   border-radius: 150px;
 
@@ -213,57 +228,183 @@ header .list4:before {
 .main-contents h2 {
   font-family: "Playfair Display", sans-serif;
   font-size: 5rem;
+  padding-bottom: 200px;
+}
+.main-contents .project {
+    padding-bottom: 4%;
 }
 .project-wrapper {
   display: flex;
   justify-content: space-around;
-  padding-top: 200px;
   gap: 20%;
+  height: auto;
 }
-.project-wrapper h3 {
-  font-family: "Pretendard-Regular";
-  font-weight: 300;
-  font-size: 400px;
+.project-num {
+    display: flex;
+
+    font-family: "Pretendard-Regular";
+    font-weight: 300;
+    font-size: 300px;
+    height: auto; width: 100%;
+    align-self: flex-start;
+
+    position: sticky;
+    top: 0;
+}
+.project-num h3 {
+    position: absolute;
+}
+.project-num .project-wrapper-num {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    position: absolute;
+    left: 40%;
+}
+.project-wrapper-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8rem;
 }
 .project-wrapper-box img {
     display: block;
     width: 700px; height: 700px;
 }
-.project-box {
+.project-box-group {
   display: flex;
   font-family: "Pretendard-Regular";
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: flex-end;
 }
-.project-box .project-box-des p {
+.project-box-group .project-box-des p {
     font-size: 16px;
 }
-.project-box .project-box-des p:last-child {
+.project-box-group .project-box-des p:last-child {
     font-size: 25px;
 }
-.project-box .project-box-tag {
+.project-box-group .project-box-tag {
+    display: flex;
+    gap: 1rem;
     font-size: 14px;
+}
+.project-box-group .project-box-tag p {
     border: 1px solid #fff;
     border-radius: 15px;
+    padding: 4px 12px;
 }
 
+
 /***** other design *****/
-.work-other h2 {
-    padding: 0 105px;
-}
 .work-other-wrapper {
   display: flex;
-  background-color: black;
-  width: 100%;
+  background-color: #fff;
+  margin: 0 -105px;
+  height: 90vh;
 }
 .other-wrapper-box {
     display: flex;
     flex-direction: column;
     flex: 1;
+    transition: 0.3s;
+    position: relative;
+
+    overflow: hidden;
+}
+.other-wrapper-box .work-other-title em {
+    position: absolute;
+    left: 3rem;
+}
+.other-wrapper-box .work-other-title h5 {
+    font-size: 2.5rem;
+    line-height: 4vh;
+    font-weight: 400;
+}
+.work-other-title {
+    position: absolute;
+    z-index: 99;
+    padding: 20rem 5rem;
+    transition: 1s;
+}
+.other-wrapper-box:hover .work-other-title {
+    padding: 5rem 5rem 2.5rem;
+    transition: 0.5s;
+    color: #040404;
+}
+.work-other-des {
+    color: #fff;
+}
+.other-wrapper-box:hover .work-other-des {
+    color: black;
+    position: absolute;
+    top: 15rem; left: 5rem;
+    transform: 1s;
+}
+.work-other-btn {
+    position: absolute;
+    z-index: 99;
+    bottom: 20rem; left: 5rem;
+    transition: 1s;
+    background-color: #1D1D1D;
+    width: 170px; height: 48px;
+    line-height: 48px; text-align: center;
+    border: 1px solid #fff;
+    border-radius: 50px;
+}
+.other-wrapper-box:hover .work-other-btn {
+    background-color: #fff;
+    color: #040404;
+    border: 1px solid #040404;
+}
+.other-wrapper-box img {
+    /* display: block; */
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    background-color: aquamarine;
+    width: 100%; height: 20vh;
+    transition: 1s;
+}
+.other-wrapper-box .slide-left {
+    display: flex;
+    background-color: black;
+    width: 60%;
+    height: 90vh;
+    position: absolute;
+    transition: 0.3s;
+    z-index: 9;
+}
+.other-wrapper-box:hover .slide-left{
+  /* transform: translateX(-500px); */
+  /* background-color: #fff; */
+  display: flex;
+  width: 50%;
+  transition: 1s;
+  transform: translateX(-500px);
+}
+.other-wrapper-box .slide-right {
+    display: flex;
+    background-color: black;
+    width: 50%;
+    height: 90vh;
+    position: absolute;
+    right: 0;
+    transition: 0.3s;
+    z-index: 9;
+}
+.other-wrapper-box:hover .slide-right {
+  /* background-color: #fff; */
+  display: flex;
+  width: 60%;
+  transition: 1s;
+  transform: translateX(500px);
+}
+.work-other-title .work-other-des {
+    width: 100%;
+    /* height: ; */
 }
 /***** skills *****/
-.skills {
-    padding: 0 105px;
-}
+
 
 /***** footer *****/
 footer {

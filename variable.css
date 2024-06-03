@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/* 폰트 설정 */
+/* font-family: 'Pretendard'; */
+@import url(../assets/style/pretendard-subset.css);
+/* font-family: "DM Sans", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+/* 변수 설정 */
+:root {
+  /* fonts */
+  --primary-font-en : "DM Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --primary-font-ko : 'Pretendard', -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo",sans-serif;
+
+  --title-size-xxl: 8.5rem;
+  --title-size-xl: 6.5rem;
+  --title-size-lg: 5rem;
+  --title-size-md: 4rem;
+  --title-size-sm: 2.8rem;
+  --title-size-sx: 2rem;
+
+  --desc-size-md: 1rem;
+  --desc-size-sm: 0.95rem;
+  --desc-size-sx: 0.9rem;
+
+  /* color */
+  --primary-color : #141212;
+
+  --list-color1: #006769;
+  --list-color2: #40a578;
+  --list-color3: #9dde8b;
+  --list-color4: #e6ff94;
+  --list-color5: #03aed2;
+  --list-color6: #68d2e8;
+  --list-color7: #fdde55;
+  --list-color8: #9bcf53;
+  --list-color9: #86a7fc;
+
+  /* 기타 */
+  --primary-radius : 20px;
+}
+
+/* global style */
+svg, svg * {
+  pointer-events: none;
+  display: block;
+}
