@@ -211,7 +211,7 @@ header .list4:before {
   padding-top: 5%; 
   margin-top: 8%;
 
-  border-radius: 150px;
+  border-radius: 150px 150px 0 0;
 
   --dot-bg: black;
   --dot-color: #222222;
@@ -254,11 +254,15 @@ header .list4:before {
 .project-num h3 {
     position: absolute;
 }
+.project-wrapper-num span {
+    transition: transform 0.5s ease-in-out;
+}
 .project-num .project-wrapper-num {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-
+    height: 40vh;
+    overflow: hidden;
+    
     position: absolute;
     left: 40%;
 }
@@ -362,7 +366,7 @@ header .list4:before {
     position: absolute;
     bottom: 0;
     background-color: aquamarine;
-    width: 100%; height: 20vh;
+    width: 100%; height: 25vh;
     transition: 1s;
 }
 .other-wrapper-box .slide-left {
@@ -405,12 +409,62 @@ header .list4:before {
 }
 /***** skills *****/
 
+.skills-box {
+    font-family: "Pretendard-Regular";
+    position: sticky;
+    top: 10%;
+    background-color: #040404;
+
+    --dot-bg: black;
+    --dot-color: #222222;
+    --dot-size: 1.5px;
+    --dot-space: 22px;
+      background:
+          linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          var(--dot-color);
+}
+.skills-box .skills-title {
+    display: flex;
+    padding: 1rem 0 2rem;
+    border-top: 0.5px solid #fff;
+    justify-content: space-between;
+}
+.skills-box .skills-title .skills-title-box {
+    display: flex;
+    gap: 5px;
+}
+.skills-box .skills-title i{
+    font-size: 2rem;
+    padding-right: 1%;
+    opacity: 0.8;
+}
+.skills-box .skills-des {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0px, 1fr));
+    padding-bottom: 10vh;
+}
+.skills-box .skills-des ul {
+    grid-column: 7 / 13;
+}
+.skills-box .skills-des ul li{
+    padding-bottom: 10px;
+}
+.skills-box .skills-title p{
+    font-size: 15px;
+}
+.skills-box .skills-title h3{
+    font-size: 2.5rem;
+    font-weight: 600;
+
+}
 
 /***** footer *****/
 footer {
     font-family: "Playfair Display", serif;
     text-align: center;
     padding: 100px 0 200px;
+
 }
 footer h1 {
     font-size: 200px;
