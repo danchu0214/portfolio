@@ -6,7 +6,7 @@
     <title>Portfolio</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <!-- favicon -->
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <!-- og -->
     <meta property="og:title" content="Portfolio">
     <meta property="og:url" content="">
@@ -32,12 +32,15 @@
 
 <body>
     <header>
-        <a href="https://github.com/danchu0214" class="github" target="_blank">GITHUB</a>
+        <a href="https://github.com/danchu0214" class="github" target="_blank">
+            GITHUB
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
         <ul>
-            <li class="list1"><a href="#">Works/UIUX</a></li>
-            <li class="list2"><a href="#">Works/Other</a></li>
-            <li class="list3"><a href="#">Skills</a></li>
-            <li class="list4"><a href="#">Contact</a></li>
+            <li class="list1" id="list1"><a href="#Works-UIUX">Works/UIUX</a></li>
+            <li class="list2" id="list2"><a href="#Works-OTHER">Works/Other</a></li>
+            <li class="list3" id="list3"><a href="#SKILLS">Skills</a></li>
+            <li class="list4" id="list4"><a href="#CONTACT">Contact</a></li>
         </ul>
     </header>
 
@@ -54,7 +57,7 @@
         </section>
 
         <section class="main-contents">
-            <div class="work-uxui">
+            <div class="work-uxui" id="Works-UIUX">
                 <h2>Work | UX/UI</h2>
                 <div class="project">
                     <div class="project-wrapper">
@@ -68,7 +71,7 @@
                         </div>
                         <div class="project-wrapper-box">
                             <a href="#" target="_blank" class="project-group">
-                                <img src="#" alt="img1">
+                                <img src="./images/uxui1.png" alt="img1">
                                 <div class="project-box-group">
                                     <div class="project-box-des">
                                         <p>간단설명</p>
@@ -113,10 +116,10 @@
                     </div>
                 </div>
 
-                <div class="work-other">
+                <div class="work-other" id="Works-OTHER">
                     <h2>WORK | OTHER DESIGN</h2>
                     <div class="work-other-wrapper">
-                        <div class="other-wrapper-box">
+                        <div class="other-wrapper-box rolled-over-txt">
                             <div class="work-other-title">
                                 <em>01</em>
                                 <h5>BUSAN<br>SITY<br>BRANDING</h5>
@@ -128,7 +131,7 @@
                             <img src="" alt="브랜딩디자인">
                         </div>
 
-                        <div class="other-wrapper-box">
+                        <div class="other-wrapper-box rolled-over-txt">
                             <div class="work-other-title">
                                 <em>02</em>
                                 <h5>ALESSANDRO<br>MENDINI<br>ARTBOOK</h5>
@@ -140,7 +143,7 @@
                             <img src="" alt="아트북디자인">
                         </div>
 
-                        <div class="other-wrapper-box">
+                        <div class="other-wrapper-box rolled-over-txt">
                             <div class="work-other-title">
                                 <em>03</em>
                                 <h5>RICE<br>PRODUCT<br>DESIGN</h5>
@@ -154,7 +157,7 @@
                     </div>
                 </div>
 
-                <div class="skills">
+                <div class="skills" id="SKILLS">
                     <h2>SKILLS</h2>
                     <div class="skills-wrapper">
                         <div class="skills-box skills-box1">
@@ -232,9 +235,14 @@
                 </div>
         </section>
     </main>
-    <footer>
+    <footer id="CONTACT">
         <h1>CONTACT ME</h1>
         <h3>naeun5794@gmail.com</h3>
+        <div class="contact-a">
+            <a href="#">Kakao<i class="fa-solid fa-chevron-right"></i></a>
+            <a href="#">Git Main<i class="fa-solid fa-chevron-right"></i></a>
+            <a href="#">Git Study<i class="fa-solid fa-chevron-right"></i></a>
+        </div>
     </footer>
 </body>
 
