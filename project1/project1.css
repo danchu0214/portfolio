@@ -1,15 +1,25 @@
 @charset "UTF-8";
+/* fonts */
+/* "Playfair Display", "Pretendard-Regular" , "goudyoldstylebold" , 'SUIT'  */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 @font-face {
     font-family: "Pretendard-Regular";
-    src: url(../assets/styles/pretendard-subset.css)
-      format("woff");
+    src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
-  }
+}
+
+@font-face {
+    font-family: "goudyoldstylebold";
+    src: url(../assets/font/goudyoldstylebold.ttf);
+}
+
+@import url('https://webfontworld.github.io/sunn/SUIT.css');
 
 body {
-    font-family: "Pretendard-Regular",sans-serif;
+    font-family: "Pretendard-Regular", sans-serif;
 }
 
 /***** header *****/
@@ -19,37 +29,32 @@ header {
     justify-content: space-between;
     padding: 60px 105px 0;
     width: 100%;
-  
+
     font-family: "Pretendard-Regular";
     font-size: 1.2rem;
     position: absolute;
+}
 
-    --dot-bg: white;
-    --dot-color: #DBDBDB;
-    --dot-size: 2px;
-    --dot-space: 35px;
-      background:
-          linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-          linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-          var(--dot-color);
-  }
-  header .github {
-      font-size: 1.05rem;
-      background-color: #040404;
+header .github {
+    font-size: 1.05rem;
+    background-color: #040404;
     color: #fff;
     width: 127px;
     height: 32px;
     padding-left: 25px;
     line-height: 32px;
     border-radius: 100px;
-  }
-  header .github i {
-      font-size: 0.95rem;
-      margin-left: 5px;
-  }
-  header .github:hover {
-      font-size: 1.05rem;
-      background-color: #fff;
+    transition: 0.3s;
+}
+
+header .github i {
+    font-size: 0.95rem;
+    margin-left: 5px;
+}
+
+header .github:hover {
+    font-size: 1.05rem;
+    background-color: #fff;
     color: #040404;
     width: 127px;
     height: 32px;
@@ -57,144 +62,582 @@ header {
     line-height: 32px;
     border-radius: 100px;
     border: 1px solid #040404;
-  }
-  
-    header li {
-      font-family:  "Pretendard-Regular";
-      font-size: 20px;
-      font-weight: 500;
-      position: relative;
-      overflow: hidden;
-      margin-bottom: 35px;
-      color: #fff;
-    }
-    /*- hover 이벤트 -*/
-    header .list1:before {
-      color: #222529;
-      content: 'Works/UIUX';
-      position: absolute;
-      top: 10%;
-      right: 5.2px;
-      transition: all 0.5s;
-  }
-  .list1:hover:before {
-      top: -100%;
-  
-  }
-  .list1:after {
-      color: #222529;
-      content: 'Works/UIUX';
-      position: absolute;
-      top: 150%;
-      left: 48%;
-      transform: translate(-50%, -50%);
-      transition: all 0.5s;
-  }
-  .list1:hover:after {
-      top: 12px;
-  }
-  .list2:hover:after {
-      top: 12px;
-  }
-  
-  header .list2:before {
-      color: #222529;
-      content: 'Works/Other';
-      position: absolute;
-      top: 10%;
-      right: 0;
-      transition: all 0.5s;
-  }
-  .list2:hover:before {
-      top: -100%;
-  
-  }
-  .list2:after {
-      color: #222529;
-      content: 'Works/Other';
-      position: absolute;
-      top: 150%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      transition: all 0.5s;
-  }
-  
-  .list2:hover:after {
-      top: 12px;
-  }
-  
-  .list3:hover:after {
-      top: 12px;
-  }
-  
-  header .list3:before {
-      color: #222529;
-      content: 'Skills';
-      position: absolute;
-      top: 10%;
-      left: 0;
-      transition: all 0.5s;
-  }
-  .list3:hover:before {
-      top: -100%;
-  
-  }
-  .list3:after {
-      color: #222529;
-      content: 'Skills';
-      position: absolute;
-      top: 150%;
-      left: 20%;
-      transform: translate(-50%, -50%);
-      transition: all 0.5s;
-  }
-  
-  .list3:hover:after {
-      top: 12px;
-  }
-  
-  .list3:hover:after {
-      top: 12px;
-  }
-  
-  header .list4:before {
-      color: #222529;
-      content: 'Contact';
-      position: absolute;
-      top: 10%;
-      left: 0;
-      transition: all 0.5s;
-  }
-  .list4:hover:before {
-      top: -100%;
-  
-  }
-  .list4:after {
-      color: #222529;
-      content: 'Contact';
-      position: absolute;
-      top: 150%;
-      left: 31%;
-      transform: translate(-50%, -50%);
-      transition: all 0.5s;
-  }
-  
-  .list4:hover:after {
-      top: 12px;
-  }
+}
 
-  /* main */
-  .main {
+header li {
+    font-family: "Pretendard-Regular";
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 35px;
+    color: #fff;
+}
+
+/*- hover 이벤트 -*/
+header .list1:before {
+    color: #222529;
+    content: 'Works/UIUX';
+    position: absolute;
+    top: 10%;
+    right: 5.2px;
+    transition: all 0.5s;
+}
+
+.list1:hover:before {
+    top: -100%;
+
+}
+
+.list1:after {
+    color: #222529;
+    content: 'Works/UIUX';
+    position: absolute;
+    top: 150%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+.list1:hover:after {
+    top: 12px;
+}
+
+.list2:hover:after {
+    top: 12px;
+}
+
+header .list2:before {
+    color: #222529;
+    content: 'Works/Other';
+    position: absolute;
+    top: 10%;
+    right: 0;
+    transition: all 0.5s;
+}
+
+.list2:hover:before {
+    top: -100%;
+
+}
+
+.list2:after {
+    color: #222529;
+    content: 'Works/Other';
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+.list2:hover:after {
+    top: 12px;
+}
+
+.list3:hover:after {
+    top: 12px;
+}
+
+header .list3:before {
+    color: #222529;
+    content: 'Skills';
+    position: absolute;
+    top: 10%;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.list3:hover:before {
+    top: -100%;
+
+}
+
+.list3:after {
+    color: #222529;
+    content: 'Skills';
+    position: absolute;
+    top: 150%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+.list3:hover:after {
+    top: 12px;
+}
+
+.list3:hover:after {
+    top: 12px;
+}
+
+header .list4:before {
+    color: #222529;
+    content: 'Contact';
+    position: absolute;
+    top: 10%;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.list4:hover:before {
+    top: -100%;
+
+}
+
+.list4:after {
+    color: #222529;
+    content: 'Contact';
+    position: absolute;
+    top: 150%;
+    left: 31%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+.list4:hover:after {
+    top: 12px;
+}
+
+/* main */
+.main {
     display: flex;
     align-items: end;
     justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    z-index: -99;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
 
-    padding: 20vh 100px 0;
-  }
-  .main video {
+    padding: 20vh 100px 10vh;
+
+    --dot-bg: white;
+    --dot-color: #DBDBDB;
+    --dot-size: 2px;
+    --dot-space: 35px;
+    background:
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+}
+
+.main video {
     height: 600px;
-    padding-bottom: 5vh;
-  }
-  .main .main-text {
+}
+
+.main .main-text {
     text-align: right;
-  }
+}
+
+.main .main-text em {
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.main .main-text h2 {
+    font-weight: bold;
+    font-size: 2.1rem;
+    padding-bottom: 1.5vh;
+}
+
+main .main-text p {
+    font-weight: bold;
+    padding-bottom: 1.5vh;
+    font-size: 1rem;
+}
+
+.main .main-text .main-flex {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.main .main-text .main-flex .main-flex-first {
+    text-align: left;
+}
+.main .main-text .main-flex .main-flex-last {
+    line-height: 1.5;
+}
+/* section */
+section {
+    padding: 160px 100px 0;
+}
+
+section h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 5rem;
+    padding-bottom: 100px;
+}
+
+/* Overview */
+.Overview {
+    background: linear-gradient(#070707 10%, #302F34);
+    border-radius: 100px 0 0 0;
+    color: white;
+    
+}
+.dot {
+    background-image: radial-gradient(
+            circle at center,
+            #6d6b72 1.5px,
+            transparent 0
+          );
+          background-size: 35px 35px;
+          background-repeat: round;
+}
+.dot::after {
+    mask-image: linear-gradient(rgb(0 0 0), rgb(0 0 0 / 0));
+}
+.Overview p {
+    padding: 0 0 0 156px;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+/* UXUI-Info */
+.UXUI-Info {
+    background: linear-gradient(#302F34, #414046 33%, #A6A5A8);
+    color: white;
+}
+.UXUI-dot {
+    background-image: radial-gradient(
+        circle at center,
+        #8a898f 1px,
+        transparent 0
+      );
+      background-size: 35px 35px;
+      background-repeat: round;
+}
+
+.UXUI-Info h3 {
+    font-size: 2.5rem;
+    padding-bottom: 5.8vh;
+}
+
+.UXUI-Info p {
+    letter-spacing: -0.3%;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+.UXUI-Info .info-concept {
+    padding-left: 200px;
+}
+
+.UXUI-Info .info-concept p:nth-child(2) {
+    padding-bottom: 5vh;
+}
+
+.UXUI-Info .info-keywords {
+    padding-top: 150px;
+}
+
+.UXUI-Info .info-keywords h3 {
+    padding-left: 200px;
+}
+
+.UXUI-Info .info-keywords .key-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.UXUI-Info .info-keywords .key-flex p {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 1px solid white;
+    font-size: 1.5rem;
+    line-height: 220px;
+    text-align: center;
+    position: relative;
+}
+
+.UXUI-Info .info-keywords .key-flex .flex-one {
+    left: 2.5vw;
+}
+
+.UXUI-Info .info-keywords .key-flex .flex-two {
+    border: 1px dashed white;
+}
+
+.UXUI-Info .info-keywords .key-flex .flex-three {
+    right: 2.5vw;
+}
+
+/* Style-Guide */
+.Style-Guide {
+    background: linear-gradient(#A6A5A8, #FFFFFF 56%);
+}
+.Style-dot {
+    background-image: radial-gradient(
+        circle at center,
+        #DBDBDB 1.5px,
+        transparent 0
+      );
+      background-size: 35px 35px;
+      background-repeat: round;
+}
+.Style-Guide h3 {
+    font-size: 2.5rem;
+    padding-bottom: 5.8vh;
+}
+
+.Style-Guide .guide-color h3,
+.Style-Guide .guide-color>p {
+    padding-left: 200px;
+}
+
+.Style-Guide .guide-color>p {
+    padding-bottom: 135px;
+    font-size: 1.2rem;
+}
+
+.Style-Guide .guide-color .guide-color-flex {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.Style-Guide .guide-color .guide-color-flex .flex-black {
+    position: relative;
+}
+
+.Style-Guide .guide-color .guide-color-flex .flex-black .black-num {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 150px;
+    height: 130px;
+    background-color: #000000;
+    border-radius: 20px 0 0 0;
+    line-height: 130px;
+    text-align: center;
+
+    color: white;
+}
+
+.Style-Guide .guide-color .guide-color-flex .flex-white {
+    position: relative;
+}
+
+.Style-Guide .guide-color .guide-color-flex .flex-white .white-num {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 150px;
+    height: 130px;
+    background-color: #ffffff;
+    border-radius: 20px 0 0 0;
+    line-height: 130px;
+    text-align: center;
+}
+
+.Style-Guide .guide-color .guide-color-flex .flex-cloud {
+    position: relative;
+}
+
+.Style-Guide .guide-color .guide-color-flex .flex-cloud .cloud-num {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+}
+
+.Style-Guide .guide-color .guide-color-flex .flex-cloud .cloud-num1 {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-35%, -50%);
+    width: 150px;
+    height: 130px;
+    background-color: #E3DED6;
+    border-radius: 20px 0 0 0;
+    line-height: 130px;
+    text-align: center;
+}
+
+.Style-Guide .guide-color .guide-color-flex .flex-cloud .cloud-num2 {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-40%, -50%);
+    width: 150px;
+    height: 130px;
+    background-color: #BEC4C0;
+    border-radius: 20px 0 0 0;
+    line-height: 130px;
+    text-align: center;
+}
+
+.Style-Guide .guide-color .guide-color-flex .flex-cloud .cloud-num3 {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-45%, -50%);
+    width: 150px;
+    height: 130px;
+    background-color: #A3ADAD;
+    border-radius: 20px 0 0 0;
+    line-height: 130px;
+    text-align: center;
+}
+
+.Style-Guide .guide-color .guide-color-flex .flex-cloud .cloud-num4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 130px;
+    background-color: #6E777A;
+    border-radius: 20px 0 0 0;
+    line-height: 130px;
+    text-align: center;
+}
+
+.Style-Guide .guide-font {
+    padding-top: 135px;
+}
+
+.Style-Guide .guide-font>h3,
+.Style-Guide .guide-font>p {
+    padding-left: 200px;
+}
+
+.Style-Guide .guide-font p {
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+.Style-Guide .guide-font .font-flex {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+}
+
+.Style-Guide .guide-font .font-flex h4 {
+    font-size: 1.25rem;
+    color: #444444;
+}
+
+.Style-Guide .guide-font .font-flex p {
+    font-size: 2.25rem;
+}
+
+.Style-Guide .guide-font .font-flex .des1 {
+    font-family: 'SUIT', sans-serif;
+}
+
+.Style-Guide .guide-font .font-flex .des2 {
+    font-family: "goudyoldstylebold", serif;
+}
+
+/* P&S */
+.Problem {
+    --dot-bg: white;
+    --dot-color: #DBDBDB;
+    --dot-size: 2px;
+    --dot-space: 35px;
+    background:
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+}
+.Problem span {
+    font-family: "goudyoldstylebold", serif;
+}
+
+.Problem ul {
+    padding-left: 200px;
+}
+
+.Problem ul li h3 {
+    font-size: 2rem;
+    padding-bottom: 55px;
+}
+
+.Problem ul li {
+    padding-bottom: 105px;
+}
+
+.Problem ul li p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding-bottom: 35px;
+}
+
+/* Review */
+.Review {
+    --dot-bg: white;
+    --dot-color: #DBDBDB;
+    --dot-size: 2px;
+    --dot-space: 35px;
+    background:
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+}
+.Review ul {
+    padding-left: 200px;
+}
+
+.Review ul li {
+    padding-bottom: 55px;
+}
+
+.Review ul li h3 {
+    font-size: 2rem;
+    padding-bottom: 60px;
+}
+
+.Review ul li p {
+    padding-bottom: 30px;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+/* footer */
+footer {
+    --dot-bg: white;
+    --dot-color: #DBDBDB;
+    --dot-size: 2px;
+    --dot-space: 35px;
+    background:
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+
+        padding-bottom: 150px;
+}
+.footer-flex {
+    display: flex;
+    justify-content: end;
+    padding: 115px 200px 0 0;
+
+    gap: 5%;
+}
+footer p {
+    width: 220px; height: 55px;
+    border: 1px solid #000;
+    border-radius: 20px 0 0 0;
+    font-size: 1.2rem;
+
+    line-height: 55px; text-align: center;
+    transition: 0.3s;
+}
+footer p:hover {
+    background: #000;
+    color: #fff;
+}
+footer p i {
+    margin-left: 10px;
+}

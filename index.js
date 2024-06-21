@@ -1,46 +1,58 @@
-
-;(function ($, window, document, undefined) {
-    "use strict";
-
-    var ClassScrollOpacityEffect,
-        defaults = {
-            endPoint: 500,
-            opacity: 1,
-            opacityDivisor: 1000,
-            transformDivisor: 7
-        };
-
-    ClassScrollOpacityEffect = function (triggerHolder, options) {
-        return {
-            init: function () {
-                this.settings = $.extend({}, defaults, options);
-                this._effect(triggerHolder, this.settings)
-            },
-            _effect: function (holder, settings) {
-                $(window).scroll(function () {
-                    var scrollTop = $(window).scrollTop();
-
-                    if (scrollTop < settings.endPoint) {
-                        holder.css('opacity', settings.opacity - scrollTop / settings.opacityDivisor);
-                        holder.css({
-                            '-webkit-transform': 'translateY(' + scrollTop / settings.transformDivisor + '%)',
-                            '-ms-transform': 'translateY(' + scrollTop / settings.transformDivisor + '%)',
-                            transform: 'translateY(' + scrollTop / settings.transformDivisor + '%)'
-                        });
-                    }
-                });
-            }
-        };
+var ClassScrollEffect,
+    defaults = {
+        endPoint: 500,
+        initialOpacity: 1,
+        minOpacity: 0.5,
+        opacityDivisor: 1000,
+        initialScale: 1,
+        minScale: 0.5, // 조정된 부분: 최소로 축소될 크기 설정
+        scaleDivisor: 1000 // 조정된 부분: scale 변화를 더 미세하게 조정
     };
 
-    $(document).ready(function () {
-        var scrollEffect = new ClassScrollOpacityEffect($('.main-title h2'), {
-            // 사용자 정의 옵션을 여기에 추가할 수 있습니다.
-        });
-        scrollEffect.init();
-    });
+ClassScrollEffect = function (triggerHolder, options) {
+    return {
+        init: function () {
+            this.settings = $.extend({}, defaults, options);
+            this._effect(triggerHolder, this.settings);
+        },
+        _effect: function (holder, settings) {
+            $(window).scroll(function () {
+                var scrollTop = $(window).scrollTop();
 
-})(jQuery, window, document);
+                if (scrollTop < settings.endPoint) {
+                    // Calculate opacity based on scroll position
+                    var opacity = settings.initialOpacity - scrollTop / settings.opacityDivisor;
+                    if (opacity < settings.minOpacity) {
+                        opacity = settings.minOpacity;
+                    }
+                    holder.css('opacity', opacity);
+
+                    // Calculate scale based on scroll position
+                    var scale = settings.initialScale - scrollTop / settings.scaleDivisor;
+                    if (scale < settings.minScale) {
+                        scale = settings.minScale;
+                    }
+                    holder.css({
+                        '-webkit-transform': 'scale(' + scale + ')',
+                        '-ms-transform': 'scale(' + scale + ')',
+                        transform: 'scale(' + scale + ')'
+                    });
+                }
+            });
+        }
+    };
+};
+
+$(document).ready(function () {
+    var scrollEffect = new ClassScrollEffect($('.main-title'), {
+        initialOpacity: 1,
+        minOpacity: 0.3, // 예시로 설정된 값
+        initialScale: 1,
+        minScale: 0. // 예시로 설정된 값
+    });
+    scrollEffect.init();
+});
+
 
 document.addEventListener("DOMContentLoaded", function() {
     function smoothScrollTo(sectionId) {
