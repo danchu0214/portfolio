@@ -5,8 +5,8 @@ var ClassScrollEffect,
         minOpacity: 0.5,
         opacityDivisor: 1000,
         initialScale: 1,
-        minScale: 0.5, // 조정된 부분: 최소로 축소될 크기 설정
-        scaleDivisor: 1000 // 조정된 부분: scale 변화를 더 미세하게 조정
+        minScale: 0.9, // 조정된 부분: 최소로 축소될 크기 설정
+        scaleDivisor: 5000 // 조정된 부분: scale 변화를 더 미세하게 조정
     };
 
 ClassScrollEffect = function (triggerHolder, options) {
@@ -48,7 +48,7 @@ $(document).ready(function () {
         initialOpacity: 1,
         minOpacity: 0.3, // 예시로 설정된 값
         initialScale: 1,
-        minScale: 0. // 예시로 설정된 값
+        minScale: 0.8 // 예시로 설정된 값
     });
     scrollEffect.init();
 });
