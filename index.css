@@ -399,12 +399,12 @@ header .list4:before {
     border: 1px solid #040404;
 }
 .other-wrapper-box img {
-    /* display: block; */
     z-index: 1;
     position: absolute;
     bottom: 0;
-    background-color: aquamarine;
-    width: 100%; height: 25vh;
+    background-color: #fff;
+    width: 100%; height: 100%;
+    object-fit: cover;
     transition: 1s;
 }
 .other-wrapper-box .slide-left {

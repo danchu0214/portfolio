@@ -79,28 +79,28 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  gsap.utils.toArray('.rolled-over-txt').forEach((element) => {
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: element,
-        start: '100% 100%',
-        end: '100% 100%',
-        scrub: 1
-      }
-    }).fromTo(
-      element,
-      {
-        y: 100,
-        opacity: 0
-      },
-      {
-        y: 0,
-        opacity: 1,
-        ease: 'none',
-        duration: 5
-      }
-    );
-  });
+  // gsap.utils.toArray('.rolled-over-txt').forEach((element) => {
+  //   gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: element,
+  //       start: '100% 100%',
+  //       end: '100% 100%',
+  //       scrub: 1
+  //     }
+  //   }).fromTo(
+  //     element,
+  //     {
+  //       y: 100,
+  //       opacity: 0
+  //     },
+  //     {
+  //       y: 0,
+  //       opacity: 1,
+  //       ease: 'none',
+  //       duration: 5
+  //     }
+  //   );
+  // });
   
   
   
