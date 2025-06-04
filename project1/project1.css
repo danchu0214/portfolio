@@ -35,30 +35,30 @@ header {
     position: absolute;
 }
 
-header .github {
+header .back {
     font-size: 1.05rem;
     background-color: #040404;
     color: #fff;
     width: 127px;
     height: 32px;
-    padding-left: 25px;
+    padding-left: 23px;
     line-height: 32px;
     border-radius: 100px;
     transition: 0.3s;
 }
 
-header .github i {
+header .back i {
     font-size: 0.95rem;
     margin-left: 5px;
 }
 
-header .github:hover {
+header .back:hover {
     font-size: 1.05rem;
     background-color: #fff;
     color: #040404;
     width: 127px;
     height: 32px;
-    padding-left: 25px;
+    padding-left: 23px;
     line-height: 32px;
     border-radius: 100px;
     border: 1px solid #040404;
@@ -77,7 +77,7 @@ header li {
 /*- hover 이벤트 -*/
 header .list1:before {
     color: #222529;
-    content: 'Works/UIUX';
+    content: 'Project1';
     position: absolute;
     top: 10%;
     right: 5.2px;
@@ -91,7 +91,7 @@ header .list1:before {
 
 .list1:after {
     color: #222529;
-    content: 'Works/UIUX';
+    content: 'Project1';
     position: absolute;
     top: 150%;
     left: 48%;
@@ -109,7 +109,7 @@ header .list1:before {
 
 header .list2:before {
     color: #222529;
-    content: 'Works/Other';
+    content: 'Project2';
     position: absolute;
     top: 10%;
     right: 0;
@@ -123,7 +123,7 @@ header .list2:before {
 
 .list2:after {
     color: #222529;
-    content: 'Works/Other';
+    content: 'Project2';
     position: absolute;
     top: 150%;
     left: 50%;
@@ -141,7 +141,7 @@ header .list2:before {
 
 header .list3:before {
     color: #222529;
-    content: 'Skills';
+    content: 'Project3';
     position: absolute;
     top: 10%;
     left: 0;
@@ -155,10 +155,10 @@ header .list3:before {
 
 .list3:after {
     color: #222529;
-    content: 'Skills';
+    content: 'Project3';
     position: absolute;
     top: 150%;
-    left: 20%;
+    left: 50%;
     transform: translate(-50%, -50%);
     transition: all 0.5s;
 }
@@ -173,7 +173,7 @@ header .list3:before {
 
 header .list4:before {
     color: #222529;
-    content: 'Contact';
+    content: 'Project4';
     position: absolute;
     top: 10%;
     left: 0;
@@ -187,10 +187,10 @@ header .list4:before {
 
 .list4:after {
     color: #222529;
-    content: 'Contact';
+    content: 'Project4';
     position: absolute;
     top: 150%;
-    left: 31%;
+    left: 50%;
     transform: translate(-50%, -50%);
     transition: all 0.5s;
 }
@@ -258,9 +258,11 @@ main .main-text p {
 .main .main-text .main-flex .main-flex-first {
     text-align: left;
 }
+
 .main .main-text .main-flex .main-flex-last {
     line-height: 1.5;
 }
+
 /* section */
 section {
     padding: 160px 100px 0;
@@ -277,20 +279,21 @@ section h1 {
     background: linear-gradient(#070707 10%, #302F34);
     border-radius: 100px 0 0 0;
     color: white;
-    
+
 }
+
 .dot {
-    background-image: radial-gradient(
-            circle at center,
+    background-image: radial-gradient(circle at center,
             #6d6b72 1.5px,
-            transparent 0
-          );
-          background-size: 35px 35px;
-          background-repeat: round;
+            transparent 0);
+    background-size: 35px 35px;
+    background-repeat: round;
 }
+
 .dot::after {
     mask-image: linear-gradient(rgb(0 0 0), rgb(0 0 0 / 0));
 }
+
 .Overview p {
     padding: 0 0 0 156px;
     line-height: 1.5;
@@ -302,14 +305,13 @@ section h1 {
     background: linear-gradient(#302F34, #414046 33%, #A6A5A8);
     color: white;
 }
+
 .UXUI-dot {
-    background-image: radial-gradient(
-        circle at center,
-        #8a898f 1px,
-        transparent 0
-      );
-      background-size: 35px 35px;
-      background-repeat: round;
+    background-image: radial-gradient(circle at center,
+            #8a898f 1px,
+            transparent 0);
+    background-size: 35px 35px;
+    background-repeat: round;
 }
 
 .UXUI-Info h3 {
@@ -371,15 +373,15 @@ section h1 {
 .Style-Guide {
     background: linear-gradient(#A6A5A8, #FFFFFF 56%);
 }
+
 .Style-dot {
-    background-image: radial-gradient(
-        circle at center,
-        #DBDBDB 1.5px,
-        transparent 0
-      );
-      background-size: 35px 35px;
-      background-repeat: round;
+    background-image: radial-gradient(circle at center,
+            #DBDBDB 1.5px,
+            transparent 0);
+    background-size: 35px 35px;
+    background-repeat: round;
 }
+
 .Style-Guide h3 {
     font-size: 2.5rem;
     padding-bottom: 5.8vh;
@@ -553,6 +555,7 @@ section h1 {
         linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
         var(--dot-color);
 }
+
 .Problem span {
     font-family: "goudyoldstylebold", serif;
 }
@@ -587,6 +590,7 @@ section h1 {
         linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
         var(--dot-color);
 }
+
 .Review ul {
     padding-left: 200px;
 }
@@ -605,6 +609,7 @@ section h1 {
     line-height: 1.5;
     font-size: 1.2rem;
 }
+
 /* footer */
 footer {
     --dot-bg: white;
@@ -616,8 +621,9 @@ footer {
         linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
         var(--dot-color);
 
-        padding-bottom: 150px;
+    padding-bottom: 150px;
 }
+
 .footer-flex {
     display: flex;
     justify-content: end;
@@ -625,19 +631,24 @@ footer {
 
     gap: 5%;
 }
+
 footer p {
-    width: 220px; height: 55px;
+    width: 220px;
+    height: 55px;
     border: 1px solid #000;
     border-radius: 20px 0 0 0;
     font-size: 1.2rem;
 
-    line-height: 55px; text-align: center;
+    line-height: 55px;
+    text-align: center;
     transition: 0.3s;
 }
+
 footer p:hover {
     background: #000;
     color: #fff;
 }
+
 footer p i {
     margin-left: 10px;
 }

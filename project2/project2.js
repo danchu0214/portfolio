@@ -52,3 +52,29 @@ $(document).ready(function () {
     });
     scrollEffect.init();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    var shortcuts = {
+        "list1": "../project1/project1.html",
+        "list2": "#",
+        "list3": "../project3/project3.html",
+        "list4": "../project4/project4.html"
+    };
+
+    Object.keys(shortcuts).forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) {
+            el.addEventListener("click", function (e) {
+                e.preventDefault();
+                var target = shortcuts[id];
+
+                if (target.includes('.html')) {
+                    window.location.href = target;
+                } else {
+                    var section = document.getElementById(target);
+                    if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        }
+    });
+});

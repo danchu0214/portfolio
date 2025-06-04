@@ -1,0 +1,810 @@
+@charset "UTF-8";
+/* fonts */
+/* "Playfair Display", "Pretendard-Regular"*/
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: "Pretendard-Regular", sans-serif;
+}
+
+/***** header *****/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 105px 0;
+    width: 100%;
+
+    font-family: "Pretendard-Regular";
+    font-size: 1.2rem;
+    position: absolute;
+}
+
+header .back {
+    font-size: 1.05rem;
+    background-color: #040404;
+    color: #fff;
+    width: 127px;
+    height: 32px;
+    padding-left: 23px;
+    line-height: 32px;
+    border-radius: 100px;
+}
+
+header .back i {
+    font-size: 0.95rem;
+    margin-left: 5px;
+}
+
+header .back:hover {
+    font-size: 1.05rem;
+    background-color: #fff;
+    color: #040404;
+    width: 127px;
+    height: 32px;
+    padding-left: 23px;
+    line-height: 32px;
+    border-radius: 100px;
+    border: 1px solid #040404;
+}
+
+header li {
+    font-family: "Pretendard-Regular";
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 35px;
+    color: #fff;
+}
+
+/*- hover 이벤트 -*/
+header .list1:before {
+    color: #222529;
+    content: 'Project1';
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    right: 5.2px;
+    transition: all 0.5s;
+}
+
+.list1:hover:before {
+    top: -100%;
+
+}
+
+.list1:after {
+    color: #222529;
+    content: 'Project1';
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+.list1:hover:after {
+    top: 12px;
+}
+
+.list2:hover:after {
+    top: 12px;
+}
+
+header .list2:before {
+    color: #222529;
+    content: 'Project2';
+    position: absolute;
+    top: 10%;
+    right: 0;
+    transition: all 0.5s;
+}
+
+.list2:hover:before {
+    top: -100%;
+
+}
+
+.list2:after {
+    color: #222529;
+    content: 'Project2';
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+.list2:hover:after {
+    top: 12px;
+}
+
+.list3:hover:after {
+    top: 12px;
+}
+
+header .list3:before {
+    color: #222529;
+    content: 'Project3';
+    position: absolute;
+    top: 10%;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.list3:hover:before {
+    top: -100%;
+
+}
+
+.list3:after {
+    color: #222529;
+    content: 'Project3';
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+.list3:hover:after {
+    top: 12px;
+}
+
+.list3:hover:after {
+    top: 12px;
+}
+
+header .list4:before {
+    color: #222529;
+    content: 'Project4';
+    position: absolute;
+    top: 10%;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.list4:hover:before {
+    top: -100%;
+
+}
+
+.list4:after {
+    color: #222529;
+    content: 'Project4';
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+.list4:hover:after {
+    top: 12px;
+}
+
+/* main */
+.main {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    z-index: -99;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+
+    padding: 20vh 100px 10vh;
+
+    --dot-bg: white;
+    --dot-color: #DCC7F2;
+    --dot-size: 2px;
+    --dot-space: 35px;
+    background: url(./images/bgd-circle.png) center top 5vh no-repeat fixed,
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+}
+
+.main video {
+    height: 600px;
+    background-color: #222529;
+}
+
+.main .main-text {
+    text-align: right;
+}
+
+.main .main-text em {
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.main .main-text h2 {
+    font-weight: bold;
+    font-size: 2.1rem;
+    padding-bottom: 1.5vh;
+}
+
+main .main-text p {
+    font-weight: bold;
+    padding-bottom: 1.5vh;
+    font-size: 1rem;
+}
+
+.main .main-text .main-flex {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.main .main-text .main-flex .main-flex-first {
+    text-align: left;
+    line-height: 1.5;
+}
+
+.main .main-text .main-flex .main-flex-last {
+    line-height: 1.5;
+}
+
+/* section */
+section h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 5rem;
+    padding-bottom: 100px;
+}
+
+section h3 {
+    font-size: 2.5rem;
+    padding-bottom: 5.8vh;
+}
+
+section p {
+    letter-spacing: -0.3%;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+/* overview */
+.Overview {
+    background: #FFF2F4;
+    border-radius: 100px 0 0 0;
+    padding: 160px 100px 0;
+
+background: linear-gradient(#ccc 1px, transparent 1px), linear-gradient(90deg, #ccc 1px, transparent 1px);
+background-size: 20px 20px;
+}
+
+.Overview .Overview-box {
+    padding-left: 90px;
+}
+
+.Overview .Overview-box p {
+    padding-bottom: 150px;
+}
+
+.Overview .Overview-box ul {
+    list-style: inherit;
+    padding-left: 1.5%;
+}
+
+.Overview .Overview-box ul li {
+    letter-spacing: -0.3%;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+/* goal */
+.Goal {
+    background: #fff;
+    padding: 160px 100px 160px;
+    padding-top: 160px;
+    height: 60vh;
+
+    --dot-bg: white;
+    --dot-color: #DCC7F2;
+    --dot-size: 2px;
+    --dot-space: 35px;
+    background:
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+}
+
+.Goal .Goal-bg {
+    --dot-bg: white;
+    --dot-color: #DCC7F2;
+    --dot-size: 2px;
+    --dot-space: 35px;
+    background:
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+    border-radius: 0 0 0 20px;
+    position: absolute;
+    height: 50vh;
+    width: 90%;
+}
+
+/* .Goal h1 {
+    padding-left: 100px;
+} */
+.Goal .Goal-wrap {
+    padding-left: 90px;
+}
+
+.Goal .Goal-wrap ul {
+    list-style: inherit;
+    padding-left: 1.5%;
+}
+
+.Goal .Goal-wrap ul li {
+    letter-spacing: -0.3%;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+/* keywords */
+.Keywords {
+    padding: 0 100px 295px;
+    color: #fff;
+
+    --dot-bg: #8667E0;
+    --dot-color: #B392D7;
+    --dot-size: 2px;
+    --dot-space: 35px;
+    background:
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+}
+
+.Keywords .key-wrap {
+    padding-top: 150px;
+}
+
+.Keywords .key-wrap h3 {
+    padding-left: 200px;
+}
+
+.Keywords .key-wrap .key-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.Keywords .key-wrap .key-flex p {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 1px solid white;
+    font-size: 1.5rem;
+    line-height: 220px;
+    text-align: center;
+    position: relative;
+}
+
+.Keywords .key-wrap .key-flex .flex-one {
+    left: 2.5vw;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.Keywords .key-wrap .key-flex .flex-two {
+    border: 1px dashed white;
+}
+
+.Keywords .key-wrap .key-flex .flex-three {
+    right: 2.5vw;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* prototype */
+.Prototype {
+    background: linear-gradient(#fff 43%, #8667E0);
+    padding: 160px 0;
+    position: relative;
+    z-index: -99;
+
+    /*
+    --dot-bg: white;
+    --dot-color: #DCC7F2;
+    --dot-size: 2px;
+    --dot-space: 35px;
+    background:
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color); */
+}
+
+.Prototype h1 {
+    padding-left: 100px;
+}
+
+.Prototype .Home-wrap h3 {
+    padding-left: 190px;
+    padding-bottom: 5px;
+}
+
+.Prototype .Home-wrap .AsisTobe {
+    width: 45vw;
+    padding: 2vh 0 10vh 195px;
+}
+
+.Prototype .Home-wrap .AsisTobe .Asis-color {
+    color: #8667E0;
+}
+
+.Prototype .Home-wrap .AsisTobe .Asis p:nth-child(2) {
+    color: #434343;
+}
+
+.Prototype .Home-wrap .Tobe {
+    text-align: right;
+}
+
+.Prototype .Home-wrap .Tobe .Tobe-color {
+    color: #8667E0;
+}
+
+.Prototype .Home-wrap .Tobe p:last-child {
+    padding-bottom: 10vh;
+}
+
+.Prototype .Home-wrap .Tobe span {
+    font-weight: 600;
+}
+
+.Prototype .Home-wrap .Home-box {
+    position: relative;
+    width: 90%;
+    height: 50vh;
+    margin: 0 auto;
+}
+
+.Prototype .Home-wrap .Home-box .Home-box-back {
+    position: absolute;
+    bottom: 0;
+    background: rgba(138, 108, 225, 0.3);
+    border-radius: 20px;
+    width: 100%;
+    height: 50vh;
+    text-indent: -999px;
+}
+
+.Prototype .Home-wrap .Home-box .home {
+    position: absolute;
+    left: 28%;
+    bottom: 0;
+    height: 60vh;
+}
+
+.Prototype .Home-wrap .Home-box .home-big {
+    position: absolute;
+    left: 26%;
+    bottom: 35%;
+    height: 40%;
+}
+
+.Prototype .Home-wrap .Home-box::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    z-index: 99;
+    background: linear-gradient(rgba(220, 211, 246, 0), #DCD3F6 85%);
+}
+
+.Prototype .Home-wrap .Home-box .Home-box-des {
+    position: absolute;
+}
+
+.Prototype .Home-wrap .Home-box .Home-box-des .Home-des-title {
+    font-weight: bold;
+}
+
+.Prototype .Home-wrap .Home-box .des1 {
+    right: 18%;
+    top: -9%;
+}
+
+.Prototype .Home-wrap .Home-box .des2 {
+    left: 9%;
+    top: 50%;
+    text-align: right;
+}
+
+.Prototype .Home-wrap .Home-box .des3 {
+    right: 33%;
+    bottom: 25%;
+}
+
+.Prototype .Home-wrap .Home-box .des1 .home-line1 {
+    position: absolute;
+    top: 40%;
+    left: -110%;
+}
+
+.Prototype .Home-wrap .Home-box .des2 .home-line2 {
+    position: absolute;
+    top: -105%;
+    right: -65%;
+}
+
+.Prototype .Home-wrap .Home-box .des3 .home-line3 {
+    position: absolute;
+    bottom: 70%;
+    right: 105%;
+}
+
+/* reservation */
+.Reservation {
+    padding-top: 160px;
+    position: relative;
+}
+
+.Reservation-circle {
+    position: absolute;
+    z-index: -9;
+    width: 100%;
+    top: -20%;
+}
+
+.Reservation h3 {
+    padding: 100px 190px 0;
+}
+
+.Reservation .AsisTobe {
+    width: 45vw;
+    padding: 2vh 0 15vh 195px;
+}
+
+.Reservation .AsisTobe .Asis-color {
+    color: #8667E0;
+}
+
+.Reservation .AsisTobe .Asis p:nth-child(2) {
+    color: #434343;
+}
+
+.Reservation .Tobe {
+    text-align: right;
+}
+
+.Reservation .Tobe .Tobe-color {
+    color: #8667E0;
+}
+
+.Reservation .Tobe p {
+    padding-bottom: 1vh;
+}
+
+.Reservation .Tobe span {
+    font-weight: 600;
+}
+
+.Reservation .Reservation-box {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.Reservation .Reservation-line {
+    display: block;
+    margin: 0 auto;
+}
+
+.Reservation .Reservation-box .Reservation-des-num {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px 0 0 0;
+    background-color: #8667E0;
+    color: #fff;
+    margin: 0 auto;
+    line-height: 30px;
+}
+
+.Reservation .Reservation-box .Reservation-des-num::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #8667E0;
+    position: absolute;
+    top: 48.9%;
+}
+
+.Reservation .Reservation-box p {
+    padding: 30px 0 60px;
+}
+
+/* details */
+.Details {
+    position: relative;
+    color: #fff;
+    padding-bottom: 105px;
+}
+
+.Details h3 {
+    padding: 200px 190px 0;
+}
+
+.Details .AsisTobe {
+    width: 45vw;
+    padding: 2vh 0 20vh 195px;
+}
+
+.Details .AsisTobe .Asis-color {
+    color: #8667E0;
+}
+
+.Details .AsisTobe .Asis p:nth-child(2) {
+    color: #434343;
+}
+
+.Details .Tobe {
+    text-align: right;
+}
+
+.Details .Tobe .Tobe-color {
+    color: #8667E0;
+}
+
+.Details .Tobe p {
+    padding-bottom: 1vh;
+}
+
+.Details .Tobe span {
+    font-weight: 600;
+}
+
+.Detail-img-line {
+    position: absolute;
+    left: 22.3%;
+    bottom: 43%;
+    z-index: 99;
+}
+
+.Detail-line {
+    position: absolute;
+    right: 9%;
+    bottom: 40%;
+}
+
+.Details-box {
+    padding: 0 100px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Details-box .Details-box-flex {
+    display: flex;
+    padding-top: 12%;
+    gap: 25px;
+
+    text-align: center;
+}
+
+.Details-box .Details-box-flex .Details-flex-des::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #8667E0;
+    position: absolute;
+    bottom: 40.7%;
+}
+
+.Details-box .Details-box-flex .Details-flex-des img {
+    padding-top: 45px;
+}
+
+/* review */
+.Review {
+    background: #fff;
+    border-radius: 100px 0 0 0;
+    padding: 110px 100px;
+
+    --dot-bg: white;
+    --dot-color: #DCC7F2;
+    --dot-size: 2px;
+    --dot-space: 35px;
+    background:
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+}
+
+.Review-bg {
+    width: 100%;
+    height: 110px;
+    border-radius: 100px 0 0 0;
+    position: absolute;
+
+    --dot-bg: white;
+    --dot-color: #DCC7F2;
+    --dot-size: 2px;
+    --dot-space: 40px;
+    background: linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+}
+
+.Review h3 {
+    padding-left: 90px;
+}
+
+.Review ul {
+    list-style: inherit;
+    padding: 0 calc(90px + 1.5%) 120px;
+}
+
+.Review ul li {
+    letter-spacing: -0.3%;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+.Review p {
+    padding: 0 90px 45px;
+}
+
+/* footer */
+footer {
+    --dot-bg: white;
+    --dot-color: #DBDBDB;
+    --dot-size: 2px;
+    --dot-space: 35px;
+    background:
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+
+    padding-bottom: 150px;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: end;
+    padding: 120px 200px 0 0;
+
+    gap: 5%;
+}
+
+footer p {
+    width: 220px;
+    height: 55px;
+    border: 1px solid #000;
+    border-radius: 20px 0 0 0;
+    font-size: 1.2rem;
+
+    line-height: 55px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+footer p:hover {
+    background: #000;
+    color: #fff;
+}
+
+footer p i {
+    margin-left: 10px;
+}
