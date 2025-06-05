@@ -269,6 +269,7 @@ section h1 {
 section h3 {
     font-size: 2.5rem;
     padding-bottom: 5.8vh;
+    padding-top: 8vh;
 }
 
 section p {
@@ -283,21 +284,40 @@ section p {
     border-radius: 100px 0 0 0;
     padding: 160px 100px 0;
 
-background: linear-gradient(#ccc 1px, transparent 1px), linear-gradient(90deg, #ccc 1px, transparent 1px);
-background-size: 20px 20px;
+    background-color: #FFF2F4;
+    background-image:
+        linear-gradient(rgba(121, 121, 121, 0.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(121, 121, 121, 0.5) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+.Overview h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 4.5rem;
+    margin-bottom: 0;
+    color: #333;
+    background: transparent;
+    line-height: 1;
+    padding-bottom: 0;
+    padding-left: 3vh;
+}
+
+.Overview .Overview-wrap {
+    background: #fff;
+    margin-top: -1.5rem;
+    padding-top: 2rem;
+    border-radius: 5px;
 }
 
 .Overview .Overview-box {
-    padding-left: 90px;
-}
-
-.Overview .Overview-box p {
-    padding-bottom: 150px;
+    padding-left: 120px;
 }
 
 .Overview .Overview-box ul {
     list-style: inherit;
     padding-left: 1.5%;
+    padding-bottom: 5%;
 }
 
 .Overview .Overview-box ul li {
@@ -313,36 +333,33 @@ background-size: 20px 20px;
     padding-top: 160px;
     height: 60vh;
 
-    --dot-bg: white;
-    --dot-color: #DCC7F2;
-    --dot-size: 2px;
-    --dot-space: 35px;
-    background:
-        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-        var(--dot-color);
+    background-color: #FFF2F4;
+    background-image:
+        linear-gradient(rgba(121, 121, 121, 0.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(121, 121, 121, 0.5) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+.Goal h1 {
+    font-size: 4.5rem;
+    color: #333;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+    line-height: 1;
+    padding-bottom: 0;
+    padding-left: 3vh;
 }
 
 .Goal .Goal-bg {
-    --dot-bg: white;
-    --dot-color: #DCC7F2;
-    --dot-size: 2px;
-    --dot-space: 35px;
-    background:
-        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-        var(--dot-color);
-    border-radius: 0 0 0 20px;
-    position: absolute;
-    height: 50vh;
-    width: 90%;
+    background: #fff;
+    margin-top: -1.5rem;
+    padding-top: 3rem;
+    border-radius: 5px;
 }
 
-/* .Goal h1 {
-    padding-left: 100px;
-} */
 .Goal .Goal-wrap {
-    padding-left: 90px;
+    padding: 8vh 0 5vh 90px;
 }
 
 .Goal .Goal-wrap ul {
@@ -354,25 +371,36 @@ background-size: 20px 20px;
     letter-spacing: -0.3%;
     line-height: 1.5;
     font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 /* keywords */
 .Keywords {
-    padding: 0 100px 295px;
-    color: #fff;
+    padding: 160px 100px 295px;
+    color: #000;
 
-    --dot-bg: #8667E0;
-    --dot-color: #B392D7;
-    --dot-size: 2px;
-    --dot-space: 35px;
-    background:
-        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-        var(--dot-color);
+    background-color: #FFF2F4;
+    background-image:
+        linear-gradient(rgba(121, 121, 121, 0.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(121, 121, 121, 0.5) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+.Keywords h1 {
+    font-size: 4.5rem;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+    line-height: 1;
+    padding-bottom: 0;
+    padding-left: 3vh;
 }
 
 .Keywords .key-wrap {
-    padding-top: 150px;
+    background: #fff;
+    margin-top: -1.5rem;
+    border-radius: 5px;
+    padding: 13vh 0;
 }
 
 .Keywords .key-wrap h3 {
@@ -397,16 +425,18 @@ background-size: 20px 20px;
 
 .Keywords .key-wrap .key-flex .flex-one {
     left: 2.5vw;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(190, 9, 74, 0.2);
+    border: 1px solid rgb(190, 9, 74);
 }
 
 .Keywords .key-wrap .key-flex .flex-two {
-    border: 1px dashed white;
+    border: 1px dashed rgb(190, 9, 74);
 }
 
 .Keywords .key-wrap .key-flex .flex-three {
     right: 2.5vw;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(190, 9, 74, 0.2);
+    border: 1px solid rgb(190, 9, 74);
 }
 
 /* prototype */
@@ -416,7 +446,7 @@ background-size: 20px 20px;
     position: relative;
     z-index: -99;
 
-    /*
+
     --dot-bg: white;
     --dot-color: #DCC7F2;
     --dot-size: 2px;
@@ -424,7 +454,7 @@ background-size: 20px 20px;
     background:
         linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
         linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-        var(--dot-color); */
+        var(--dot-color);
 }
 
 .Prototype h1 {

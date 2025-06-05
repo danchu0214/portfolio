@@ -215,6 +215,7 @@ header .list4:before {
         var(--dot-color);
 }
 
+
 .main video {
     height: 600px;
     background-color: #222529;
