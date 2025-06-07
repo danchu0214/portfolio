@@ -56,8 +56,8 @@ $(document).ready(function () {
 document.addEventListener("DOMContentLoaded", function () {
     var shortcuts = {
         "list1": "../project1/project1.html",
-        "list2": "#",
-        "list3": "../project3/project3.html",
+        "list2": "../project2/project2.html",
+        "list3": "#",
         "list4": "../project4/project4.html"
     };
 

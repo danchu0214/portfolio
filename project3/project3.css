@@ -20,7 +20,7 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 60px 105px 0;
+    padding: 3.75rem 6.5625rem 0;
     width: 100%;
 
     font-family: "Pretendard-Regular";
@@ -32,37 +32,37 @@ header .back {
     font-size: 1.05rem;
     background-color: #040404;
     color: #fff;
-    width: 127px;
-    height: 32px;
-    padding-left: 23px;
-    line-height: 32px;
-    border-radius: 100px;
+    width: 7.9375rem;
+    height: 2rem;
+    padding-left: 1.4375rem;
+    line-height: 2rem;
+    border-radius: 6.25rem;
 }
 
 header .back i {
     font-size: 0.95rem;
-    margin-left: 5px;
+    margin-left: 0.3125rem;
 }
 
 header .back:hover {
     font-size: 1.05rem;
     background-color: #fff;
     color: #040404;
-    width: 127px;
-    height: 32px;
-    padding-left: 23px;
-    line-height: 32px;
-    border-radius: 100px;
-    border: 1px solid #040404;
+    width: 7.9375rem;
+    height: 2rem;
+    padding-left: 1.4375rem;
+    line-height: 2rem;
+    border-radius: 6.25rem;
+    border: 0.0625rem solid #040404;
 }
 
 header li {
     font-family: "Pretendard-Regular";
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
     position: relative;
     overflow: hidden;
-    margin-bottom: 35px;
+    margin-bottom: 2.1875rem;
     color: #fff;
 }
 
@@ -73,7 +73,7 @@ header .list1:before {
     position: absolute;
     top: 10%;
     left: 2%;
-    right: 5.2px;
+    right: 0.325rem;
     transition: all 0.5s;
 }
 
@@ -93,11 +93,11 @@ header .list1:before {
 }
 
 .list1:hover:after {
-    top: 12px;
+    top: 0.75rem;
 }
 
 .list2:hover:after {
-    top: 12px;
+    top: 0.75rem;
 }
 
 header .list2:before {
@@ -125,11 +125,11 @@ header .list2:before {
 }
 
 .list2:hover:after {
-    top: 12px;
+    top: 0.75rem;
 }
 
 .list3:hover:after {
-    top: 12px;
+    top: 0.75rem;
 }
 
 header .list3:before {
@@ -157,11 +157,11 @@ header .list3:before {
 }
 
 .list3:hover:after {
-    top: 12px;
+    top: 0.75rem;
 }
 
 .list3:hover:after {
-    top: 12px;
+    top: 0.75rem;
 }
 
 header .list4:before {
@@ -189,7 +189,7 @@ header .list4:before {
 }
 
 .list4:hover:after {
-    top: 12px;
+    top: 0.75rem;
 }
 
 /* main */
@@ -198,17 +198,17 @@ header .list4:before {
     align-items: end;
     justify-content: space-between;
     position: sticky;
-    top: 0px;
+    top: 0;
     z-index: -99;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
 
-    padding: 20vh 100px 10vh;
+    padding: 20vh 6.25rem 10vh;
 
     --dot-bg: white;
     --dot-color: #DCC7F2;
-    --dot-size: 2px;
-    --dot-space: 35px;
+    --dot-size: 0.125rem;
+    --dot-space: 2.1875rem;
     background: url(./images/bgd-circle.png) center top 5vh no-repeat fixed,
         linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
         linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
@@ -216,7 +216,7 @@ header .list4:before {
 }
 
 .main video {
-    height: 600px;
+    height: 37.5rem;
     background-color: #222529;
 }
 
@@ -263,7 +263,7 @@ main .main-text p {
 section h1 {
     font-family: "Playfair Display", serif;
     font-size: 5rem;
-    padding-bottom: 100px;
+    padding-bottom: 6.25rem;
 }
 
 section h3 {
@@ -281,14 +281,14 @@ section p {
 /* overview */
 .Overview {
     background: #FFF2F4;
-    border-radius: 100px 0 0 0;
-    padding: 160px 100px 0;
+    border-radius: 6.25rem 0 0 0;
+    padding: 10rem 6.25rem 0;
 
     background-color: #FFF2F4;
     background-image:
-        linear-gradient(rgba(121, 121, 121, 0.5) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(121, 121, 121, 0.5) 1px, transparent 1px);
-    background-size: 50px 50px;
+        linear-gradient(rgba(121, 121, 121, 0.5) 0.0625rem, transparent 0.0625rem),
+        linear-gradient(90deg, rgba(121, 121, 121, 0.5) 0.0625rem, transparent 0.0625rem);
+    background-size: 3.125rem 3.125rem;
 }
 
 .Overview h1 {
@@ -307,11 +307,11 @@ section p {
     background: #fff;
     margin-top: -1.5rem;
     padding-top: 2rem;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
 }
 
 .Overview .Overview-box {
-    padding-left: 120px;
+    padding-left: 7.5rem;
 }
 
 .Overview .Overview-box ul {
@@ -329,15 +329,15 @@ section p {
 /* goal */
 .Goal {
     background: #fff;
-    padding: 160px 100px 160px;
-    padding-top: 160px;
+    padding: 10rem 6.25rem 10rem;
+    padding-top: 10rem;
     height: 60vh;
 
     background-color: #FFF2F4;
     background-image:
-        linear-gradient(rgba(121, 121, 121, 0.5) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(121, 121, 121, 0.5) 1px, transparent 1px);
-    background-size: 50px 50px;
+        linear-gradient(rgba(121, 121, 121, 0.5) 0.0625rem, transparent 0.0625rem),
+        linear-gradient(90deg, rgba(121, 121, 121, 0.5) 0.0625rem, transparent 0.0625rem);
+    background-size: 3.125rem 3.125rem;
 }
 
 .Goal h1 {
@@ -355,11 +355,11 @@ section p {
     background: #fff;
     margin-top: -1.5rem;
     padding-top: 3rem;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
 }
 
 .Goal .Goal-wrap {
-    padding: 8vh 0 5vh 90px;
+    padding: 8vh 0 5vh 5.625rem;
 }
 
 .Goal .Goal-wrap ul {
@@ -376,14 +376,14 @@ section p {
 
 /* keywords */
 .Keywords {
-    padding: 160px 100px 295px;
+    padding: 10rem 6.25rem 18.4375rem;
     color: #000;
 
     background-color: #FFF2F4;
     background-image:
-        linear-gradient(rgba(121, 121, 121, 0.5) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(121, 121, 121, 0.5) 1px, transparent 1px);
-    background-size: 50px 50px;
+        linear-gradient(rgba(121, 121, 121, 0.5) 0.0625rem, transparent 0.0625rem),
+        linear-gradient(90deg, rgba(121, 121, 121, 0.5) 0.0625rem, transparent 0.0625rem);
+    background-size: 3.125rem 3.125rem;
 }
 
 .Keywords h1 {
@@ -399,12 +399,12 @@ section p {
 .Keywords .key-wrap {
     background: #fff;
     margin-top: -1.5rem;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     padding: 13vh 0;
 }
 
 .Keywords .key-wrap h3 {
-    padding-left: 200px;
+    padding-left: 12.5rem;
 }
 
 .Keywords .key-wrap .key-flex {
@@ -413,12 +413,12 @@ section p {
 }
 
 .Keywords .key-wrap .key-flex p {
-    width: 220px;
-    height: 220px;
+    width: 13.75rem;
+    height: 13.75rem;
     border-radius: 50%;
-    border: 1px solid white;
+    border: 0.0625rem solid white;
     font-size: 1.5rem;
-    line-height: 220px;
+    line-height: 13.75rem;
     text-align: center;
     position: relative;
 }
@@ -426,32 +426,32 @@ section p {
 .Keywords .key-wrap .key-flex .flex-one {
     left: 2.5vw;
     background-color: rgba(190, 9, 74, 0.2);
-    border: 1px solid rgb(190, 9, 74);
+    border: 0.0625rem solid rgb(190, 9, 74);
 }
 
 .Keywords .key-wrap .key-flex .flex-two {
-    border: 1px dashed rgb(190, 9, 74);
+    border: 0.0625rem dashed rgb(190, 9, 74);
 }
 
 .Keywords .key-wrap .key-flex .flex-three {
     right: 2.5vw;
     background-color: rgba(190, 9, 74, 0.2);
-    border: 1px solid rgb(190, 9, 74);
+    border: 0.0625rem solid rgb(190, 9, 74);
 }
 
 /* prototype */
 .Prototype {
     background: linear-gradient(#fff 43%, #8667E0);
-    padding: 160px 0;
+    padding: 10rem 0;
     position: relative;
     z-index: -99;
-    border-radius: 100px 0 0 0;
+    border-radius: 6.25rem 0 0 0;
 
 
     --dot-bg: white;
     --dot-color: #DCC7F2;
-    --dot-size: 2px;
-    --dot-space: 35px;
+    --dot-size: 0.125rem;
+    --dot-space: 2.1875rem;
     background:
         linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
         linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
@@ -459,11 +459,11 @@ section p {
 }
 
 .Prototype h1 {
-    padding-left: 100px;
+    padding-left: 6.25rem;
 }
 
 .Prototype .Main-screen h1 {
-    padding-left: 190px;
+    padding-left: 11.875rem;
     font-family: pretenderd;
     font-size: 3.125rem;
     font-weight: 600
@@ -474,9 +474,22 @@ section p {
     justify-content: space-around;
 }
 
+.Prototype .Main-screen .mainScreen-wrap .mainScreen-text {
+    text-align: right;
+}
+
+.Prototype .Main-screen .mainScreen-wrap .mainScreen-text h3 {
+    font-size: 1.5rem;
+    color: #BE094A;
+}
+
+.Prototype .Main-screen .mainScreen-wrap .mainScreen-text ul li {
+    font-size: 1rem;
+}
+
 /* reservation */
 .Reservation {
-    padding-top: 160px;
+    padding-top: 10rem;
     position: relative;
 }
 
@@ -488,12 +501,12 @@ section p {
 }
 
 .Reservation h3 {
-    padding: 100px 190px 0;
+    padding: 6.25rem 11.875rem 0;
 }
 
 .Reservation .AsisTobe {
     width: 45vw;
-    padding: 2vh 0 15vh 195px;
+    padding: 2vh 0 15vh 12.1875rem;
 }
 
 .Reservation .AsisTobe .Asis-color {
@@ -526,7 +539,7 @@ section p {
     margin: 0 auto;
     justify-content: space-evenly;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 1.875rem;
 }
 
 .Reservation .Reservation-line {
@@ -535,20 +548,20 @@ section p {
 }
 
 .Reservation .Reservation-box .Reservation-des-num {
-    width: 30px;
-    height: 30px;
-    border-radius: 10px 0 0 0;
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 0.625rem 0 0 0;
     background-color: #8667E0;
     color: #fff;
     margin: 0 auto;
-    line-height: 30px;
+    line-height: 1.875rem;
 }
 
 .Reservation .Reservation-box .Reservation-des-num::before {
     content: "";
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 0.9375rem;
+    height: 0.9375rem;
     border-radius: 50%;
     background-color: #8667E0;
     position: absolute;
@@ -556,23 +569,23 @@ section p {
 }
 
 .Reservation .Reservation-box p {
-    padding: 30px 0 60px;
+    padding: 1.875rem 0 3.75rem;
 }
 
 /* details */
 .Details {
     position: relative;
     color: #fff;
-    padding-bottom: 105px;
+    padding-bottom: 6.5625rem;
 }
 
 .Details h3 {
-    padding: 200px 190px 0;
+    padding: 12.5rem 11.875rem 0;
 }
 
 .Details .AsisTobe {
     width: 45vw;
-    padding: 2vh 0 20vh 195px;
+    padding: 2vh 0 20vh 12.1875rem;
 }
 
 .Details .AsisTobe .Asis-color {
@@ -613,7 +626,7 @@ section p {
 }
 
 .Details-box {
-    padding: 0 100px 0;
+    padding: 0 6.25rem 0;
     display: flex;
     justify-content: space-around;
 }
@@ -621,7 +634,7 @@ section p {
 .Details-box .Details-box-flex {
     display: flex;
     padding-top: 12%;
-    gap: 25px;
+    gap: 1.5625rem;
 
     text-align: center;
 }
@@ -629,8 +642,8 @@ section p {
 .Details-box .Details-box-flex .Details-flex-des::before {
     content: "";
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 0.9375rem;
+    height: 0.9375rem;
     border-radius: 50%;
     background-color: #8667E0;
     position: absolute;
@@ -638,19 +651,19 @@ section p {
 }
 
 .Details-box .Details-box-flex .Details-flex-des img {
-    padding-top: 45px;
+    padding-top: 2.8125rem;
 }
 
 /* review */
 .Review {
     background: #fff;
-    border-radius: 100px 0 0 0;
-    padding: 110px 100px;
+    border-radius: 6.25rem 0 0 0;
+    padding: 6.875rem 6.25rem;
 
     --dot-bg: white;
     --dot-color: #DCC7F2;
-    --dot-size: 2px;
-    --dot-space: 35px;
+    --dot-size: 0.125rem;
+    --dot-space: 2.1875rem;
     background:
         linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
         linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
@@ -659,26 +672,26 @@ section p {
 
 .Review-bg {
     width: 100%;
-    height: 110px;
-    border-radius: 100px 0 0 0;
+    height: 6.875rem;
+    border-radius: 6.25rem 0 0 0;
     position: absolute;
 
     --dot-bg: white;
     --dot-color: #DCC7F2;
-    --dot-size: 2px;
-    --dot-space: 40px;
+    --dot-size: 0.125rem;
+    --dot-space: 2.5rem;
     background: linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
         linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
         var(--dot-color);
 }
 
 .Review h3 {
-    padding-left: 90px;
+    padding-left: 5.625rem;
 }
 
 .Review ul {
     list-style: inherit;
-    padding: 0 calc(90px + 1.5%) 120px;
+    padding: 0 calc(5.625rem + 1.5%) 7.5rem;
 }
 
 .Review ul li {
@@ -688,39 +701,39 @@ section p {
 }
 
 .Review p {
-    padding: 0 90px 45px;
+    padding: 0 5.625rem 2.8125rem;
 }
 
 /* footer */
 footer {
     --dot-bg: white;
     --dot-color: #DBDBDB;
-    --dot-size: 2px;
-    --dot-space: 35px;
+    --dot-size: 0.125rem;
+    --dot-space: 2.1875rem;
     background:
         linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
         linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
         var(--dot-color);
 
-    padding-bottom: 150px;
+    padding-bottom: 9.375rem;
 }
 
 .footer-flex {
     display: flex;
     justify-content: end;
-    padding: 120px 200px 0 0;
+    padding: 7.5rem 12.5rem 0 0;
 
     gap: 5%;
 }
 
 footer p {
-    width: 220px;
-    height: 55px;
-    border: 1px solid #000;
-    border-radius: 20px 0 0 0;
+    width: 13.75rem;
+    height: 3.4375rem;
+    border: 0.0625rem solid #000;
+    border-radius: 1.25rem 0 0 0;
     font-size: 1.2rem;
 
-    line-height: 55px;
+    line-height: 3.4375rem;
     text-align: center;
     transition: 0.3s;
 }
@@ -731,5 +744,5 @@ footer p:hover {
 }
 
 footer p i {
-    margin-left: 10px;
+    margin-left: 0.625rem;
 }
