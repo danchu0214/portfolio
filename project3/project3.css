@@ -476,6 +476,9 @@ section p {
 
 .Prototype .Main-screen .mainScreen-wrap .mainScreen-text {
     text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .Prototype .Main-screen .mainScreen-wrap .mainScreen-text h3 {
@@ -487,89 +490,39 @@ section p {
     font-size: 1rem;
 }
 
-/* reservation */
-.Reservation {
-    padding-top: 10rem;
-    position: relative;
-}
-
-.Reservation-circle {
-    position: absolute;
-    z-index: -9;
-    width: 100%;
-    top: -20%;
-}
-
-.Reservation h3 {
-    padding: 6.25rem 11.875rem 0;
-}
-
-.Reservation .AsisTobe {
-    width: 45vw;
-    padding: 2vh 0 15vh 12.1875rem;
-}
-
-.Reservation .AsisTobe .Asis-color {
-    color: #8667E0;
-}
-
-.Reservation .AsisTobe .Asis p:nth-child(2) {
-    color: #434343;
-}
-
-.Reservation .Tobe {
-    text-align: right;
-}
-
-.Reservation .Tobe .Tobe-color {
-    color: #8667E0;
-}
-
-.Reservation .Tobe p {
-    padding-bottom: 1vh;
-}
-
-.Reservation .Tobe span {
-    font-weight: 600;
-}
-
-.Reservation .Reservation-box {
+.Prototype .Main-screen .subScreen-img {
     display: flex;
-    width: 90%;
-    margin: 0 auto;
-    justify-content: space-evenly;
-    text-align: center;
-    padding-top: 1.875rem;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.Reservation .Reservation-line {
-    display: block;
-    margin: 0 auto;
+.Prototype .Responsive-screen h1 {
+    padding-left: 11.875rem;
+    padding-top: 8.75rem;
+    font-family: pretenderd;
+    font-size: 3.125rem;
+    font-weight: 600
 }
 
-.Reservation .Reservation-box .Reservation-des-num {
-    width: 1.875rem;
-    height: 1.875rem;
-    border-radius: 0.625rem 0 0 0;
-    background-color: #8667E0;
-    color: #fff;
-    margin: 0 auto;
-    line-height: 1.875rem;
+.Prototype .Responsive-screen .Responsive-text {
+    padding-left: 11.875rem;
+    font-family: pretenderd;
+    font-weight: 600;
+    /* display: flex; */
 }
 
-.Reservation .Reservation-box .Reservation-des-num::before {
-    content: "";
-    display: inline-block;
-    width: 0.9375rem;
-    height: 0.9375rem;
-    border-radius: 50%;
-    background-color: #8667E0;
-    position: absolute;
-    top: 48.9%;
+.Prototype .Responsive-screen .Responsive-text .desktop,
+.table,
+.mobile {
+    display: flex;
+    align-items: last baseline;
 }
 
-.Reservation .Reservation-box p {
-    padding: 1.875rem 0 3.75rem;
+.Prototype .Responsive-screen .Responsive-text h3 {
+    padding: 0;
+    font-size: 1.5rem;
+    color: #BE094A;
+    padding-right: 1.6rem;
 }
 
 /* details */
