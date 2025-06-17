@@ -529,6 +529,11 @@ section p {
     padding-right: 1.6rem;
 }
 
+.Prototype .Responsive-screen .responsive-img {
+    padding-left: 11.875rem;
+    position: relative;
+}
+
 /* details */
 .Details {
     position: relative;
