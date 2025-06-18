@@ -1,0 +1,730 @@
+@charset "UTF-8";
+/* fonts */
+/* "Playfair Display", "Pretendard-Regular"*/
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: "Pretendard-Regular", sans-serif;
+}
+
+/***** header *****/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 3.75rem 6.5625rem 0;
+    width: 100%;
+
+    font-family: "Pretendard-Regular";
+    font-size: 1.2rem;
+    position: absolute;
+}
+
+header .back {
+    font-size: 1.05rem;
+    background-color: #040404;
+    color: #fff;
+    width: 7.9375rem;
+    height: 2rem;
+    padding-left: 1.4375rem;
+    line-height: 2rem;
+    border-radius: 6.25rem;
+}
+
+header .back i {
+    font-size: 0.95rem;
+    margin-left: 0.3125rem;
+}
+
+header .back:hover {
+    font-size: 1.05rem;
+    background-color: #fff;
+    color: #040404;
+    width: 7.9375rem;
+    height: 2rem;
+    padding-left: 1.4375rem;
+    line-height: 2rem;
+    border-radius: 6.25rem;
+    border: 0.0625rem solid #040404;
+}
+
+header li {
+    font-family: "Pretendard-Regular";
+    font-size: 1.25rem;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2.1875rem;
+    color: #fff;
+}
+
+/*- hover 이벤트 -*/
+header .list1:before {
+    color: #222529;
+    content: 'Project1';
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    right: 0.325rem;
+    transition: all 0.5s;
+}
+
+.list1:hover:before {
+    top: -100%;
+
+}
+
+.list1:after {
+    color: #222529;
+    content: 'Project1';
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+.list1:hover:after {
+    top: 0.75rem;
+}
+
+.list2:hover:after {
+    top: 0.75rem;
+}
+
+header .list2:before {
+    color: #222529;
+    content: 'Project2';
+    position: absolute;
+    top: 10%;
+    right: 0;
+    transition: all 0.5s;
+}
+
+.list2:hover:before {
+    top: -100%;
+
+}
+
+.list2:after {
+    color: #222529;
+    content: 'Project2';
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+.list2:hover:after {
+    top: 0.75rem;
+}
+
+.list3:hover:after {
+    top: 0.75rem;
+}
+
+header .list3:before {
+    color: #222529;
+    content: 'Project3';
+    position: absolute;
+    top: 10%;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.list3:hover:before {
+    top: -100%;
+
+}
+
+.list3:after {
+    color: #222529;
+    content: 'Project3';
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+.list3:hover:after {
+    top: 0.75rem;
+}
+
+.list3:hover:after {
+    top: 0.75rem;
+}
+
+header .list4:before {
+    color: #222529;
+    content: 'Project4';
+    position: absolute;
+    top: 10%;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.list4:hover:before {
+    top: -100%;
+
+}
+
+.list4:after {
+    color: #222529;
+    content: 'Project4';
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+.list4:hover:after {
+    top: 0.75rem;
+}
+
+/* main */
+.main {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: -99;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+
+    padding: 20vh 6.25rem 10vh;
+
+    --dot-bg: white;
+    --dot-color: #DCC7F2;
+    --dot-size: 0.125rem;
+    --dot-space: 2.1875rem;
+    background: url(./images/bgd-circle.png) center top 5vh no-repeat fixed,
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+}
+
+.main video {
+    height: 37.5rem;
+    background-color: #222529;
+}
+
+.main .main-text {
+    text-align: right;
+}
+
+.main .main-text em {
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.main .main-text h2 {
+    font-weight: bold;
+    font-size: 2.1rem;
+    padding-bottom: 1.5vh;
+}
+
+main .main-text p {
+    font-weight: bold;
+    padding-bottom: 1.5vh;
+    font-size: 1rem;
+}
+
+.main .main-text .main-flex {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.main .main-text .main-flex .main-flex-first {
+    text-align: left;
+    line-height: 1.5;
+}
+
+.main .main-text .main-flex .main-flex-last {
+    line-height: 1.5;
+}
+
+/* section */
+section h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 5rem;
+    padding-bottom: 6.25rem;
+}
+
+section h3 {
+    font-size: 2.5rem;
+    padding-bottom: 5.8vh;
+    padding-top: 8vh;
+}
+
+section p {
+    letter-spacing: -0.3%;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+/* overview */
+.Overview {
+    background: #C4E5AE;
+    border-radius: 6.25rem 0 0 0;
+    padding: 10rem 6.25rem 0;
+
+    background-color: #C4E5AE;
+    background-image:
+        linear-gradient(rgba(121, 121, 121, 0.5) 0.0625rem, transparent 0.0625rem),
+        linear-gradient(90deg, rgba(121, 121, 121, 0.5) 0.0625rem, transparent 0.0625rem);
+    background-size: 3.125rem 3.125rem;
+}
+
+.Overview h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 4.5rem;
+    margin-bottom: 0;
+    color: #333;
+    background: transparent;
+    line-height: 1;
+    padding-bottom: 0;
+    padding-left: 3vh;
+}
+
+.Overview .Overview-wrap {
+    background: #fff;
+    margin-top: -1.5rem;
+    padding-top: 2rem;
+    border-radius: 0.3125rem;
+}
+
+.Overview .Overview-box {
+    padding-left: 7.5rem;
+}
+
+.Overview .Overview-box ul {
+    list-style: inherit;
+    padding-left: 1.5%;
+    padding-bottom: 5%;
+}
+
+.Overview .Overview-box ul li {
+    letter-spacing: -0.3%;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+/* goal */
+.Goal {
+    background: #fff;
+    padding: 10rem 6.25rem 10rem;
+    padding-top: 10rem;
+    height: 60vh;
+
+    background-color: #C4E5AE;
+    background-image:
+        linear-gradient(rgba(121, 121, 121, 0.5) 0.0625rem, transparent 0.0625rem),
+        linear-gradient(90deg, rgba(121, 121, 121, 0.5) 0.0625rem, transparent 0.0625rem);
+    background-size: 3.125rem 3.125rem;
+}
+
+.Goal h1 {
+    font-size: 4.5rem;
+    color: #333;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+    line-height: 1;
+    padding-bottom: 0;
+    padding-left: 3vh;
+}
+
+.Goal .Goal-bg {
+    background: #fff;
+    margin-top: -1.5rem;
+    padding-top: 3rem;
+    border-radius: 0.3125rem;
+}
+
+.Goal .Goal-wrap {
+    padding: 8vh 0 5vh 5.625rem;
+}
+
+.Goal .Goal-wrap ul {
+    list-style: inherit;
+    padding-left: 1.5%;
+}
+
+.Goal .Goal-wrap ul li {
+    letter-spacing: -0.3%;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* keywords */
+.Keywords {
+    padding: 10rem 6.25rem 18.4375rem;
+    color: #000;
+
+    background-color: #C4E5AE;
+    background-image:
+        linear-gradient(rgba(121, 121, 121, 0.5) 0.0625rem, transparent 0.0625rem),
+        linear-gradient(90deg, rgba(121, 121, 121, 0.5) 0.0625rem, transparent 0.0625rem);
+    background-size: 3.125rem 3.125rem;
+}
+
+.Keywords h1 {
+    font-size: 4.5rem;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+    line-height: 1;
+    padding-bottom: 0;
+    padding-left: 3vh;
+}
+
+.Keywords .key-wrap {
+    background: #fff;
+    margin-top: -1.5rem;
+    border-radius: 0.3125rem;
+    padding: 13vh 0;
+}
+
+.Keywords .key-wrap h3 {
+    padding-left: 12.5rem;
+}
+
+.Keywords .key-wrap .key-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.Keywords .key-wrap .key-flex p {
+    width: 13.75rem;
+    height: 13.75rem;
+    border-radius: 50%;
+    border: 0.0625rem solid white;
+    font-size: 1.5rem;
+    line-height: 13.75rem;
+    text-align: center;
+    position: relative;
+}
+
+.Keywords .key-wrap .key-flex .flex-one {
+    left: 2.5vw;
+    background-color: rgb(236, 226, 100, 0.2);
+    border: 0.0625rem solid rgb(236, 226, 100);
+}
+
+.Keywords .key-wrap .key-flex .flex-two {
+    border: 0.0625rem dashed rgb(236, 226, 100);
+}
+
+.Keywords .key-wrap .key-flex .flex-three {
+    right: 2.5vw;
+    background-color: rgb(236, 226, 100, 0.2);
+    border: 0.0625rem solid rgb(236, 226, 100);
+}
+
+/* prototype */
+.Prototype {
+    background: linear-gradient(#fff 43%, #8667E0);
+    padding: 10rem 0;
+    position: relative;
+    z-index: -99;
+    border-radius: 6.25rem 0 0 0;
+
+
+    --dot-bg: white;
+    --dot-color: #DCC7F2;
+    --dot-size: 0.125rem;
+    --dot-space: 2.1875rem;
+    background:
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+}
+
+.Prototype h1 {
+    padding-left: 6.25rem;
+}
+
+.Prototype .Main-screen h1 {
+    padding-left: 11.875rem;
+    font-family: pretenderd;
+    font-size: 3.125rem;
+    font-weight: 600
+}
+
+.Prototype .Main-screen .mainScreen-wrap {
+    display: flex;
+    justify-content: space-around;
+}
+
+.Prototype .Main-screen .mainScreen-wrap .mainScreen-text {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.Prototype .Main-screen .mainScreen-wrap .mainScreen-text h3 {
+    font-size: 1.5rem;
+    color: #BE094A;
+}
+
+.Prototype .Main-screen .mainScreen-wrap .mainScreen-text ul li {
+    font-size: 1rem;
+}
+
+.Prototype .Main-screen .subScreen-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.Prototype .Responsive-screen h1 {
+    padding-left: 11.875rem;
+    padding-top: 8.75rem;
+    font-family: pretenderd;
+    font-size: 3.125rem;
+    font-weight: 600
+}
+
+.Prototype .Responsive-screen .Responsive-text {
+    padding-left: 11.875rem;
+    font-family: pretenderd;
+    font-weight: 600;
+    /* display: flex; */
+}
+
+.Prototype .Responsive-screen .Responsive-text .desktop,
+.table,
+.mobile {
+    display: flex;
+    align-items: last baseline;
+}
+
+.Prototype .Responsive-screen .Responsive-text .mobile {
+    padding-bottom: 6.25rem;
+}
+
+.Prototype .Responsive-screen .Responsive-text h3 {
+    padding: 0;
+    font-size: 1.5rem;
+    color: #BE094A;
+    width: 120px;
+    padding-right: 1.6rem;
+}
+
+.Prototype .Responsive-screen .responsive-img {
+    padding-left: 11.875rem;
+    position: relative;
+    height: 800px;
+    width: 100%;
+}
+
+.Prototype .Responsive-screen .responsive-img .responsiv1 {
+    position: absolute;
+    z-index: 9;
+}
+
+.Prototype .Responsive-screen .responsive-img .responsiv2 {
+    position: absolute;
+    left: 30%;
+    top: 60%;
+}
+
+.Prototype .Responsive-screen .responsive-img .responsiv3 {
+    position: absolute;
+    right: 5%;
+    top: -20%;
+}
+
+/* details */
+.Details {
+    position: relative;
+    color: #fff;
+    padding-bottom: 6.5625rem;
+}
+
+.Details h3 {
+    padding: 12.5rem 11.875rem 0;
+}
+
+.Details .AsisTobe {
+    width: 45vw;
+    padding: 2vh 0 20vh 12.1875rem;
+}
+
+.Details .AsisTobe .Asis-color {
+    color: #8667E0;
+}
+
+.Details .AsisTobe .Asis p:nth-child(2) {
+    color: #434343;
+}
+
+.Details .Tobe {
+    text-align: right;
+}
+
+.Details .Tobe .Tobe-color {
+    color: #8667E0;
+}
+
+.Details .Tobe p {
+    padding-bottom: 1vh;
+}
+
+.Details .Tobe span {
+    font-weight: 600;
+}
+
+.Detail-img-line {
+    position: absolute;
+    left: 22.3%;
+    bottom: 43%;
+    z-index: 99;
+}
+
+.Detail-line {
+    position: absolute;
+    right: 9%;
+    bottom: 40%;
+}
+
+.Details-box {
+    padding: 0 6.25rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Details-box .Details-box-flex {
+    display: flex;
+    padding-top: 12%;
+    gap: 1.5625rem;
+
+    text-align: center;
+}
+
+.Details-box .Details-box-flex .Details-flex-des::before {
+    content: "";
+    display: inline-block;
+    width: 0.9375rem;
+    height: 0.9375rem;
+    border-radius: 50%;
+    background-color: #8667E0;
+    position: absolute;
+    bottom: 40.7%;
+}
+
+.Details-box .Details-box-flex .Details-flex-des img {
+    padding-top: 2.8125rem;
+}
+
+/* review */
+.Review {
+    background: #fff;
+    border-radius: 6.25rem 0 0 0;
+    padding: 6.875rem 6.25rem;
+
+    --dot-bg: white;
+    --dot-color: #DCC7F2;
+    --dot-size: 0.125rem;
+    --dot-space: 2.1875rem;
+    background:
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+}
+
+.Review-bg {
+    width: 100%;
+    height: 6.875rem;
+    border-radius: 6.25rem 0 0 0;
+    position: absolute;
+
+    --dot-bg: white;
+    --dot-color: #DCC7F2;
+    --dot-size: 0.125rem;
+    --dot-space: 2.5rem;
+    background: linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+}
+
+.Review h3 {
+    padding-left: 5.625rem;
+}
+
+.Review ul {
+    list-style: inherit;
+    padding: 0 calc(5.625rem + 1.5%) 7.5rem;
+}
+
+.Review ul li {
+    letter-spacing: -0.3%;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+.Review p {
+    padding: 0 5.625rem 2.8125rem;
+}
+
+/* footer */
+footer {
+    --dot-bg: white;
+    --dot-color: #DBDBDB;
+    --dot-size: 0.125rem;
+    --dot-space: 2.1875rem;
+    background:
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+
+    padding-bottom: 9.375rem;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: end;
+    padding: 7.5rem 12.5rem 0 0;
+
+    gap: 5%;
+}
+
+footer p {
+    width: 13.75rem;
+    height: 3.4375rem;
+    border: 0.0625rem solid #000;
+    border-radius: 1.25rem 0 0 0;
+    font-size: 1.2rem;
+
+    line-height: 3.4375rem;
+    text-align: center;
+    transition: 0.3s;
+}
+
+footer p:hover {
+    background: #000;
+    color: #fff;
+}
+
+footer p i {
+    margin-left: 0.625rem;
+}

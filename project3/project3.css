@@ -526,12 +526,32 @@ section p {
     padding: 0;
     font-size: 1.5rem;
     color: #BE094A;
+    width: 120px;
     padding-right: 1.6rem;
 }
 
 .Prototype .Responsive-screen .responsive-img {
     padding-left: 11.875rem;
     position: relative;
+    height: 800px;
+    width: 100%;
+}
+
+.Prototype .Responsive-screen .responsive-img .responsiv1 {
+    position: absolute;
+    z-index: 9;
+}
+
+.Prototype .Responsive-screen .responsive-img .responsiv2 {
+    position: absolute;
+    left: 30%;
+    top: 60%;
+}
+
+.Prototype .Responsive-screen .responsive-img .responsiv3 {
+    position: absolute;
+    right: 5%;
+    top: -20%;
 }
 
 /* details */
