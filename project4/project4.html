@@ -87,122 +87,59 @@
             </div>
         </section>
 
-        <section class="Prototype">
-            <h1>Prototype</h1>
-            <div class="Main-screen">
-                <h1>Main Screen</h1>
-                <div class="mainScreen-wrap">
-                    <div class="mainScreen-text">
-                        <div class="text1">
-                            <h3>아기자기한 메인페이지</h3>
-                            <ul>
-                                <li>귀엽고 발랄한 브랜드의 이미지를 보여주기 위해<br>
-                                    css animation, stroke-dashoffset을 사용하여<br>
-                                    동적인 느낌을 추가하였습니다.<br>
-                                    오브젝트들은 마우스로 이동이 가능해<br>
-                                    사용자의 몰입도와 재미를 더했습니다.</li>
-                            </ul>
-                        </div>
-                        <div class="text2">
-                            <h3>간단한 이벤트 소개</h3>
-                            <ul>
-                                <li>스크롤 이벤트를 통해 사용자가 필수로 확인해야 하는<br>
-                                    공지를 강조하도록 연출하였고,<br>
-                                    이벤트 바로가기 버튼으로 빠른 접근이 가능합니다.</li>
-                            </ul>
-                        </div>
-                        <div class="text3">
-                            <h3>YOUTUBE 영상</h3>
-                            <ul>
-                                <li>페이지 중간에 자동재생되는 미디어를 넣어<br>
-                                    사용자의 몰입도를 증가시키며<br>
-                                    자칫 단조로울 수 있는 페이지에 동적인 느낌을 추가합니다.</li>
-                            </ul>
-                        </div>
-                        <div class="text4">
-                            <h3>베스트 셀러</h3>
-                            <ul>
-                                <li>마우스 hover 이벤트를 활용해<br>
-                                    인기 상품들을 더욱 눈에 띄게하여 구매율을 높입니다.</li>
-                            </ul>
-                        </div>
-                        <div class="text5">
-                            <h3>공식 SNS</h3>
-                            <ul>
-                                <li>클릭 시 바로 공식 SNS 게시글로 이동하며,<br>
-                                    셀럽의 이미지나 제품 상세 이미지가 담긴<br>
-                                    SNS를 통해 홍보효과를 높입니다.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="mainScreen-img"><img src="./images/main-PC.png" alt="main-img"></div>
-                    <div class="subScreen-img">
-                        <div class="subScreen1"><img src="./images/main1.png" alt=""></div>
-                        <div class="subScreen2"><img src="./images/main2.png" alt=""></div>
-                        <div class="subScreen3"><img src="./images/main3.png" alt=""></div>
-                    </div>
-                </div>
-            </div>
-            <div class="Responsive-screen">
-                <h1>Responsive Screen</h1>
-                <div class="Responsive-text">
-                    <div class="desktop">
-                        <h3>Desktop</h3>
-                        <ul>
-                            <li>min-width:1200px</li>
-                        </ul>
-                    </div>
-                    <div class="table">
-                        <h3>Table</h3>
-                        <ul>
-                            <li>min-width:834px, max-width:1999px</li>
-                        </ul>
-                    </div>
-                    <div class="mobile">
-                        <h3>Mobile</h3>
-                        <ul>
-                            <li>max-width:833px</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="responsive-img">
-                    <img src="./images/responsiv1.png" alt="responsiv1" class="responsiv1">
-                    <img src="./images/responsiv2.png" alt="responsiv2" class="responsiv2">
-                    <img src="./images/responsiv3.png" alt="responsiv3" class="responsiv3">
-                </div>
-            </div>
+        <section class="Problem">
+            <h1>Problem <span>&</span> Solution</h1>
+            <ul>
+                <li>
+                    <h3>1. 레이아웃</h3>
+                    <p>처음에 디자인 할 때, 깔끔하고 무채색인 느낌이 나의 다른 작업물들과 비슷해보여 고민</p>
+                    <p> -><strong>메인 이미지를 마스킹</strong>해서 포인트에 넣음으로써 단색보다는 그라디언트 느낌이 나도록 하였고,<br>
+                        고급진 느낌을 더욱 신경써 캐주얼한 느낌의 작업물들과 차이점을 줌.</p>
+                </li>
+                <li>
+                    <h3>2. 마우스 가로스크롤</h3>
+                    <p>마우스로 연속된 가로스크롤을 구현 해보았지만 리스트 갯수가 적어 이어지지 않고 끊김. GSAP를 사용하지 않고 html의 class명에 swipe를 추가해보았지만, 마지막 리스트에서 이동하지 않음. </p>
+                    <p>->여러번의 구글 서치를 통해 swipe를 삭제, 다시 GSAP의 코드에서 가로 스크롤의 영역을 지정하는 부분인<br>
+                        <strong>document.querySelector().offsetWidth</strong>에 들어가는 <strong>class명을
+                            수정</strong>했더니 올바르게 적용
+                    </p>
+                    <img src="./images/code.png" alt="code">
+                </li>
+                <li>
+                    <h3>3. 영상 paralax효과 주기</h3>
+                    <p>영상 위아래 부분에 다른 빠르기의 시차효과를 주기 위해 GSAP의 scrollTrigger를 사용하였지만 값만 재할당 될 뿐 작동하지 않는 오류. </p>
+                    <p>->scrollTrigger animation 대신 <strong>addEventListener를 사용</strong>해 영상 영역을 background로 설정.<br>
+                        위아래
+                        부분에 다른 빠르기는 줄 수 없었지만 paralax효과는 올바르게 적용</p>
+                </li>
+            </ul>
         </section>
 
-        <div class="Review-bg"></div>
         <section class="Review">
             <h1>Review</h1>
-            <div class="Bad">
-                <h3>아쉬운 점</h3>
-                <ul>
-                    <li>발표를 한 뒤 나왔던 예약 후에 관련된 질문은 미처 생각해 보지 못했던 부분이라 여러 사용자의 입장에서 생각해 봐야겠다고 느꼈다. </li>
-                    <li>추후에 수정을 했지만, 너무 사용자의 편의성만 생각하다 보니 실제로 구현이 힘든 부분을 디자인했다.</li>
-                </ul>
-            </div>
-            <div class="Good">
-                <h3>성과</h3>
-                <ul>
-                    <li> 서로가 부족한 부분을 도와주며 최선의 결과물을 위해 작업했다. </li>
-                    <li> 정해진 기간 내에 목표했던 웹 움직임을 모두 구현했다.</li>
-                    <li> setTimeout, mousemove와 같은 javaScript 이벤트를 다같이 공부하고 적용했다.</li>
-                </ul>
-            </div>
-            <div class="opinion">
-                <h3>배운점 및 주관적 의견</h3>
-                <p> 수업을 들으며 잘 이해가 가지 않았던 javaScrip,jQuery 활용 능력을 익혔고,<br>잘 안다고 생각했던 html과 css 부분에서도 나의 부족한 점을 파악하고 배울 수
-                    있었다.</p>
-                <p>Github Organization을 처음 사용해 보았는데 여러가지 오류를 고치며<br>
-                    팀 작업을 할 때의 Github 사용법에 대해 배울 수 있었다.</p>
-                <p>자신이 없었던 javaScrip, jQuery가 팀프로젝트를 하며 원하는 효과가 구현이 될 때 재밌다고 느껴지는 순간들이 있었다.<br>
-                    퍼블리싱을 하며 나의 역량에 한계가 보였지만 그만큼 더 발전할 수 있는 기회라고 생각했다.</p>
-                <p>
-                    팀프로젝트를 위해 퍼블리싱 가이드를 제작한 것이 협업에 많은 도움이 되었다.
-                </p>
-            </div>
+            <ul>
+                <li>
+                    <h3>Bad</h3>
+                    <p>-헤더의 배경이 가로 스크롤의 범위까지는 투명하다가 가로스크롤이 끝나는 부분부터 blur 처리가 되길 바랬는데 수정하지 못했다.</p>
+                    <p>- 가로스크롤의 마지막 이미지가 left: 70%가 되었을 때 가로스크롤을 끝내고 다음 영역으로 세로스크롤 되기를 원했는데 구현하지 못했다.</p>
+                    <p>
+                        -좋은 자료를 구하지 못해 푸터의 백그라운드 이미지 화질이 좋지 못하다.</p>
+                </li>
+                <li>
+                    <h3>Good</h3>
+                    <p>-처음 구상할 때 생각했던 scrolltriger를 이용한 가로스크롤, parallax를 이용한 시차 효과와 같은 스크롤 이벤트를 다 넣었다.</p>
+                    <p>- 정해진 시간 내에 디자인부터 퍼블리싱까지 온전한 나의 힘으로 작업했다.</p>
+                </li>
+                <li>
+                    <h3>Review</h3>
+                    <p>-나의 다소 편협한 디자인 취향에 대해 반성하게 된 프로젝트였다.<br>
+                        다양한 컨셉으로 디자인과 퍼블리싱을 하는 것이 목표인데, 자꾸 익숙한 방향으로 디자인을 진행하다보니<br>
+                        결국 이전과 똑같은 방향으로 가고있다는 것이 느껴져 힘들었다.<br>
+                        디자인 중간부터 이런 문제를 깨닫고 마지막까지 많은 고민을 했던 것이 앞으로의 작업들에도 큰 도움이 될 것 같다.</p>
+                    <p>-사용된 이미지들에 한계가 있어 주어진 자료를 가공하거나 제작할 수 있는 능숙한 툴 능력이 필요하다고 생각했다</p>
+                    <p>-스스로의 한계와 가능성을 알게 된 작업이였던 것 같다. </p>
+                </li>
+            </ul>
         </section>
     </main>
     <footer>
@@ -222,7 +159,7 @@
     <script src="../assets/js/gsap.min.js"></script>
     <script src="../assets/js/ScrollTrigger.min.js"></script>
     <!-- js -->
-    <script src="./project4.js"></script>
+    <script src="./project4 .js"></script>
 </body>
 
 </html>
