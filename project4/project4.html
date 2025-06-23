@@ -92,16 +92,15 @@
             <ul>
                 <li>
                     <h3>1. 레이아웃</h3>
-                    <p>처음에 디자인 할 때, 깔끔하고 무채색인 느낌이 나의 다른 작업물들과 비슷해보여 고민</p>
-                    <p> -><strong>메인 이미지를 마스킹</strong>해서 포인트에 넣음으로써 단색보다는 그라디언트 느낌이 나도록 하였고,<br>
-                        고급진 느낌을 더욱 신경써 캐주얼한 느낌의 작업물들과 차이점을 줌.</p>
+                    <p>색감은 다른 작업물들과 다르지만, 요소 배치와 같은 레이아웃에 고민이 많았음.</p>
+                    <p> -><strong>다양한 오브젝트</strong>를 사용하여 빈공간에 배치으로써 디자인적 느낌을 강화하였고,,<br>
+                        심플하면서도 너무 비어보이지 않는 디자인을 완성함.</p>
                 </li>
                 <li>
                     <h3>2. 마우스 가로스크롤</h3>
-                    <p>마우스로 연속된 가로스크롤을 구현 해보았지만 리스트 갯수가 적어 이어지지 않고 끊김. GSAP를 사용하지 않고 html의 class명에 swipe를 추가해보았지만, 마지막 리스트에서 이동하지 않음. </p>
-                    <p>->여러번의 구글 서치를 통해 swipe를 삭제, 다시 GSAP의 코드에서 가로 스크롤의 영역을 지정하는 부분인<br>
-                        <strong>document.querySelector().offsetWidth</strong>에 들어가는 <strong>class명을
-                            수정</strong>했더니 올바르게 적용
+                    <p>마우스로 연속된 가로스크롤을 구현 해보았지만 리스트 갯수가 적어 이어지지 않고 끊김. swipe를 이용하여 js코드를 짰지만, 마지막 리스트에서 이동하지 않음. </p>
+                    <p>->여러번의 구글 서치를 통해 main swiper를 설정하는 <br>
+                        <strong>document.addEventListener</strong>와 반복, 레이아웃, 이동방법을 설정하는 <strong>var productSwiper = new Swiper(,{})</strong>를 수정했더니 올바르게 적용.
                     </p>
                     <img src="./images/code.png" alt="code">
                 </li>
