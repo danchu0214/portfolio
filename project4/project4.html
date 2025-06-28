@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>project3</title>
+    <title>project4</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <!-- reset css -->
     <link rel="stylesheet" href="../assets/styles/reset.css">
@@ -57,33 +57,56 @@
             <div class="Overview-wrap">
                 <div class="Overview-box">
                     <h3>선정이유</h3>
-                    <p>제주곶밭의 ‘숲과 들이 전하는 발효 라이프’라는 캐치프라이즈를 이용해 리디자인 및 퍼블리싱을 진행하였습니다<br>.
+                    <p>제주곶밭의 ‘숲과 들이 전하는 발효 라이프’라는 캐치프라이즈를 이용해 리디자인 및 퍼블리싱을 진행하였습니다.<br>
                         특히 제주도의 숲과 들이라는 이미지를 메인 주제로 잡아 국내 브랜드임을 강조하였습니다.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section class="INFO">
+        <section class="Info">
             <h1>UIUX Info</h1>
-            <div class="concept">
-                <h3>concept</h3>
-                <div>
-                    <p>메인 이미지와 캐치프라이즈의 공간을 크게 배치하여 브랜드의 성격을 나타내었습니다.<br>
-                        깔끔한 레이아웃과 크기가 비슷한 오브젝트를 배치하여 통일감을 주었습니다.</p>
+            <div class="info-wrap">
+                <div class="concept">
+                    <h3>concept</h3>
+                    <div>
+                        <p>메인 이미지와 캐치프라이즈의 공간을 크게 배치하여 브랜드의 성격을 나타내었습니다.<br>
+                            깔끔한 레이아웃과 크기가 비슷한 오브젝트를 배치하여 통일감을 주었습니다.</p>
 
-                    <p>다양한 제품과 프로그램을 효과적으로 보여주기 위해 <strong>부분 가로스크롤</strong>을 사용하였고, <strong>마우스 스크롤 패럴렉스</strong> 부분을
-                        통해
-                        밋밋할 수 있는 소개 페이지에 재미를 주었습니다.</p>
+                        <p>다양한 제품과 프로그램을 효과적으로 보여주기 위해 <strong>부분 가로스크롤</strong>을 사용하였고, <strong>마우스 스크롤 패럴렉스</strong>
+                            부분을
+                            통해
+                            밋밋할 수 있는 소개 페이지에 재미를 주었습니다.</p>
+                    </div>
+                </div>
+                <div class="keywords">
+                    <h3>keywords</h3>
+                    <div class="key-wrap">
+                        <div class="key-flex">
+                            <p class="flex-one"># 산뜻한</p>
+                            <p class="flex-two"># 친숙한</p>
+                            <p class="flex-three"># 깔끔한</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="keywords">
-                <h3>keywords</h3>
-                <div class="key-flex">
-                    <p class="flex-one"># 산뜻한</p>
-                    <p class="flex-two"># 친숙한</p>
-                    <p class="flex-three"># 깔끔한</p>
+            <div class="info-bg"></div>
+        </section>
+
+        <section class="StyleGuide">
+            <h1>Style-Guide</h1>
+            <div class="colorpalette">
+                <p>제주곶밭의 기존 로고 색상과 산뜻함을 주는 yellow & green 컬러를 사용하였습니다.</p>
+                <div class="colorimg">
+                    <img src="" alt="colorimg1">
+                    <img src="" alt="colorimg2">
+                    <img src="" alt="colorimg3">
                 </div>
+            </div>
+            <div class="typograhpy">
+                <p class="typo">국문과 영문 둘 다 본고딕을 기반으로 한 ‘Pretendard’서체를 기본으로 사용하였습니다.<br>
+                    Pretendard는 어느 플랫폼에서든 사용할 수 있는 system-ui 대체 글꼴로, 가독성이 좋으며 완성도가 높습니다.</p>
+                <img src="" alt="typoimg">
             </div>
         </section>
 
@@ -100,7 +123,8 @@
                     <h3>2. 마우스 가로스크롤</h3>
                     <p>마우스로 연속된 가로스크롤을 구현 해보았지만 리스트 갯수가 적어 이어지지 않고 끊김. swipe를 이용하여 js코드를 짰지만, 마지막 리스트에서 이동하지 않음. </p>
                     <p>->여러번의 구글 서치를 통해 main swiper를 설정하는 <br>
-                        <strong>document.addEventListener</strong>와 반복, 레이아웃, 이동방법을 설정하는 <strong>var productSwiper = new Swiper(,{})</strong>를 수정했더니 올바르게 적용.
+                        <strong>document.addEventListener</strong>와 반복, 레이아웃, 이동방법을 설정하는 <strong>var productSwiper = new
+                            Swiper(,{})</strong>를 수정했더니 올바르게 적용.
                     </p>
                     <img src="./images/code.png" alt="code">
                 </li>
@@ -119,24 +143,22 @@
             <ul>
                 <li>
                     <h3>Bad</h3>
-                    <p>-헤더의 배경이 가로 스크롤의 범위까지는 투명하다가 가로스크롤이 끝나는 부분부터 blur 처리가 되길 바랬는데 수정하지 못했다.</p>
-                    <p>- 가로스크롤의 마지막 이미지가 left: 70%가 되었을 때 가로스크롤을 끝내고 다음 영역으로 세로스크롤 되기를 원했는데 구현하지 못했다.</p>
+                    <p>-유튜브 영상이 반복재생 되기를 원했지만 한번의 재생으로 끝난다.</p>
+                    <p>- 가로스크롤의 마지막 이미지가 left: 70%가 되었을 때 가로스크롤을 끝내고 다음 영역으로 세로스크롤 되기를 원했는데 구현하지 못했다.(수정)</p>
                     <p>
-                        -좋은 자료를 구하지 못해 푸터의 백그라운드 이미지 화질이 좋지 못하다.</p>
+                        -pc를 먼저 구상하다보니 tablet, mobile로 갈수록 퀄리티가 떨어진 것 같다.</p>
                 </li>
                 <li>
                     <h3>Good</h3>
-                    <p>-처음 구상할 때 생각했던 scrolltriger를 이용한 가로스크롤, parallax를 이용한 시차 효과와 같은 스크롤 이벤트를 다 넣었다.</p>
-                    <p>- 정해진 시간 내에 디자인부터 퍼블리싱까지 온전한 나의 힘으로 작업했다.</p>
+                    <p>-처음 구상할 때 생각했던 scrolltriger를 이용한 가로스크롤, parallax를 이용한 시차 효과와 같은 스크롤 이벤트를 다 넣었다.(수정)</p>
+                    <p>- 처음에 정했던 퍼블리싱 효과들을 대부분 계획대로 작업하였다.</p>
+                    <p>- pc, tablet, mobile 모두 디자인, 퍼블리싱 하였다.</p>
                 </li>
                 <li>
                     <h3>Review</h3>
-                    <p>-나의 다소 편협한 디자인 취향에 대해 반성하게 된 프로젝트였다.<br>
-                        다양한 컨셉으로 디자인과 퍼블리싱을 하는 것이 목표인데, 자꾸 익숙한 방향으로 디자인을 진행하다보니<br>
-                        결국 이전과 똑같은 방향으로 가고있다는 것이 느껴져 힘들었다.<br>
-                        디자인 중간부터 이런 문제를 깨닫고 마지막까지 많은 고민을 했던 것이 앞으로의 작업들에도 큰 도움이 될 것 같다.</p>
-                    <p>-사용된 이미지들에 한계가 있어 주어진 자료를 가공하거나 제작할 수 있는 능숙한 툴 능력이 필요하다고 생각했다</p>
-                    <p>-스스로의 한계와 가능성을 알게 된 작업이였던 것 같다. </p>
+                    <p>-컨셉과 나타내고 싶은 이미지가 확실해 재밌었던 프로젝트였다.</p>
+                    <p>-이미지들을 컨셉에 맞게 가공하고, 오브젝트를 배치하는 법을 배웠다.</p>
+                    <p>-다양한 사이즈로 퍼블리싱을 작업하였다. </p>
                 </li>
             </ul>
         </section>
@@ -158,7 +180,7 @@
     <script src="../assets/js/gsap.min.js"></script>
     <script src="../assets/js/ScrollTrigger.min.js"></script>
     <!-- js -->
-    <script src="./project4 .js"></script>
+    <script src="./project4.js"></script>
 </body>
 
 </html>
