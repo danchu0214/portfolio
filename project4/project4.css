@@ -269,6 +269,7 @@ section h1 {
     font-family: "Playfair Display", serif;
     font-size: 5rem;
     padding-bottom: 6.25rem;
+    color: #333;
 }
 
 section h3 {
@@ -418,6 +419,7 @@ section p {
 
 /* Style-Guide */
 .StyleGuide {
+    padding: 10rem 6.25rem 0;
     --dot-bg: white;
     --dot-color: #DBDBDB;
     --dot-size: 2px;
@@ -428,96 +430,34 @@ section p {
         var(--dot-color);
 }
 
-.Style-dot {
-    background-image: radial-gradient(circle at center,
-            #DBDBDB 1.5px,
-            transparent 0);
-    background-size: 35px 35px;
-    background-repeat: round;
+.StyleGuide h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 4.5rem;
+    margin-bottom: 0;
+    color: #333;
+    background: transparent;
+    line-height: 1;
+    padding-bottom: 0;
 }
 
-.Style-Guide h3 {
-    font-size: 2.5rem;
-    padding-bottom: 5.8vh;
+.StyleGuide .colorpalette h3,
+.colorpalette p {
+    padding-left: 7.5rem;
 }
 
-.Style-Guide .guide-color h3,
-.Style-Guide .guide-color>p {
-    padding-left: 200px;
-}
-
-.Style-Guide .guide-color>p {
-    padding-bottom: 135px;
-    font-size: 1.2rem;
-}
-
-.Style-Guide .guide-color .guide-color-flex {
+.StyleGuide .colorpalette .colorimg {
     display: flex;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-evenly;
+    padding-top: 7rem;
 }
 
-.Style-Guide .guide-color .guide-color-flex .flex-black {
-    position: relative;
+.StyleGuide .typograhpy {
+    padding-left: 7.5rem;
 }
 
-.Style-Guide .guide-color .guide-color-flex .flex-black .black-num {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 150px;
-    height: 130px;
-    background-color: #000000;
-    border-radius: 20px 0 0 0;
-    line-height: 130px;
-    text-align: center;
-
-    color: white;
-}
-
-.Style-Guide .guide-color .guide-color-flex .flex-white {
-    position: relative;
-}
-
-.Style-Guide .guide-color .guide-color-flex .flex-white .white-num {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 150px;
-    height: 130px;
-    background-color: #ffffff;
-    border-radius: 20px 0 0 0;
-    line-height: 130px;
-    text-align: center;
-}
-
-.Style-Guide .guide-color .guide-color-flex .flex-cloud {
-    position: relative;
-}
-
-.Style-Guide .guide-color .guide-color-flex .flex-cloud .cloud-num {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    color: white;
-}
-
-.Style-Guide .guide-color .guide-color-flex .flex-cloud .cloud-num1 {
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    transform: translate(-35%, -50%);
-    width: 150px;
-    height: 130px;
-    background-color: #E3DED6;
-    border-radius: 20px 0 0 0;
-    line-height: 130px;
+.StyleGuide .typo-text {
+    padding: 7rem 0;
     text-align: center;
 }
 
@@ -583,31 +523,45 @@ section p {
 
 .Style-Guide .guide-font .font-flex h4 {
     font-size: 1.25rem;
-    color: #444444;
+    font-family: "Pretendard-Regular";
 }
 
-.Style-Guide .guide-font .font-flex p {
+.StyleGuide .typo-text .typo-text2,
+.typo-text3 {
     font-size: 2.25rem;
+    font-weight: bold;
 }
 
-.Style-Guide .guide-font .font-flex .des1 {
-    font-family: 'SUIT', sans-serif;
-}
-
-.Style-Guide .guide-font .font-flex .des2 {
-    font-family: "goudyoldstylebold", serif;
-}
-
-/* P&S */
+/* Problem */
 .Problem {
-    --dot-bg: white;
-    --dot-color: #DBDBDB;
-    --dot-size: 2px;
-    --dot-space: 35px;
-    background:
-        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-        var(--dot-color);
+    border-radius: 6.25rem 0 0 0;
+    padding: 10rem 6.25rem 0;
+    background: linear-gradient(90deg,
+            #EDE79C 0%,
+            #EDE79C calc(100% - 0.0625rem),
+            #FFFFFF calc(100% - 0.0625rem),
+            #FFFFFF 100%);
+    background-size: 5rem 100%;
+    background-repeat: repeat-x;
+}
+
+.Problem h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 4.5rem;
+    margin-bottom: 0;
+    color: #333;
+    background: transparent;
+    line-height: 1;
+    padding-bottom: 0;
+    padding-left: 3vh;
+}
+
+.Problem .problem-wrap {
+    background: #fff;
+    margin-top: -1.5rem;
+    padding-top: 2rem;
+    border-radius: 0.3125rem;
 }
 
 .Problem span {
@@ -633,16 +587,46 @@ section p {
     padding-bottom: 35px;
 }
 
+.Problem .problem-bg {
+    padding: 10rem 6.25rem 0;
+    background: linear-gradient(90deg,
+            #EDE79C 0%,
+            #EDE79C calc(100% - 0.0625rem),
+            #FFFFFF calc(100% - 0.0625rem),
+            #FFFFFF 100%);
+    background-size: 5rem 100%;
+    background-repeat: repeat-x;
+}
+
 /* Review */
 .Review {
-    --dot-bg: white;
-    --dot-color: #DBDBDB;
-    --dot-size: 2px;
-    --dot-space: 35px;
-    background:
-        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-        var(--dot-color);
+    padding: 10rem 6.25rem 0;
+    background: linear-gradient(90deg,
+            #F3CC7F 0%,
+            #F3CC7F calc(100% - 0.0625rem),
+            #FFFFFF calc(100% - 0.0625rem),
+            #FFFFFF 100%);
+    background-size: 5rem 100%;
+    background-repeat: repeat-x;
+}
+
+.Review h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 4.5rem;
+    margin-bottom: 0;
+    color: #333;
+    background: transparent;
+    line-height: 1;
+    padding-bottom: 0;
+    padding-left: 3vh;
+}
+
+.Review .review-wrap {
+    background: #fff;
+    margin-top: -1.5rem;
+    padding-top: 2rem;
+    border-radius: 0.3125rem;
 }
 
 .Review ul {
@@ -662,6 +646,17 @@ section p {
     padding-bottom: 30px;
     line-height: 1.5;
     font-size: 1.2rem;
+}
+
+.Review .review-bg {
+    padding: 10rem 6.25rem 0;
+    background: linear-gradient(90deg,
+            #F3CC7F 0%,
+            #F3CC7F calc(100% - 0.0625rem),
+            #FFFFFF calc(100% - 0.0625rem),
+            #FFFFFF 100%);
+    background-size: 5rem 100%;
+    background-repeat: repeat-x;
 }
 
 /* footer */
