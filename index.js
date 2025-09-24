@@ -54,58 +54,58 @@ $(document).ready(function () {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     function smoothScrollTo(sectionId) {
-      var sectionElement = document.getElementById(sectionId);
-      if (sectionElement) {
-        sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+        var sectionElement = document.getElementById(sectionId);
+        if (sectionElement) {
+            sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     }
-  
+
     var shortcuts = {
-      "list1": "Works-UIUX",
-      "list2": "Works-OTHER",
-      "list3": "SKILLS",
-      "list4": "CONTACT"
+        "list1": "Works-UIUX",
+        "list2": "Works-OTHER",
+        "list3": "SKILLS",
+        "list4": "CONTACT"
     };
-  
-    Object.keys(shortcuts).forEach(function(shortcutId) {
-      var shortcutElement = document.getElementById(shortcutId);
-      if (shortcutElement) {
-        shortcutElement.addEventListener("click", function() {
-          smoothScrollTo(shortcuts[shortcutId]);
-        });
-      }
+
+    Object.keys(shortcuts).forEach(function (shortcutId) {
+        var shortcutElement = document.getElementById(shortcutId);
+        if (shortcutElement) {
+            shortcutElement.addEventListener("click", function () {
+                smoothScrollTo(shortcuts[shortcutId]);
+            });
+        }
     });
-  });
+});
 
-  // gsap.utils.toArray('.rolled-over-txt').forEach((element) => {
-  //   gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: element,
-  //       start: '100% 100%',
-  //       end: '100% 100%',
-  //       scrub: 1
-  //     }
-  //   }).fromTo(
-  //     element,
-  //     {
-  //       y: 100,
-  //       opacity: 0
-  //     },
-  //     {
-  //       y: 0,
-  //       opacity: 1,
-  //       ease: 'none',
-  //       duration: 5
-  //     }
-  //   );
-  // });
-  
-  
-  
+// gsap.utils.toArray('.rolled-over-txt').forEach((element) => {
+//   gsap.timeline({
+//     scrollTrigger: {
+//       trigger: element,
+//       start: '100% 100%',
+//       end: '100% 100%',
+//       scrub: 1
+//     }
+//   }).fromTo(
+//     element,
+//     {
+//       y: 100,
+//       opacity: 0
+//     },
+//     {
+//       y: 0,
+//       opacity: 1,
+//       ease: 'none',
+//       duration: 5
+//     }
+//   );
+// });
 
-document.addEventListener("DOMContentLoaded", function() {
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
     const projectGroups = document.querySelectorAll(".project-group");
     const projectWrapperNum = document.querySelector(".project-wrapper-num");
 
@@ -138,4 +138,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // 페이지 로드시 한번 실행하여 초기 상태 설정
     handleScroll();
+});
+
+const toTopBtn = document.getElementById('toTopBtn');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        toTopBtn.style.display = 'block';
+    } else {
+        toTopBtn.style.display = 'none';
+    }
+});
+
+toTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 });
